@@ -10,6 +10,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 
@@ -20,11 +21,10 @@ public class MainActivity extends ActionBarActivity {
         setContentView(R.layout.activity_main);
 
         //Declara los textView
-        TextView txtViewBienvenido = (TextView) findViewById(R.id.textViewBienvenido);
-        TextView txtViewIngresa = (TextView) findViewById(R.id.textViewIngresa);
-        TextView txtViewFacebook = (TextView) findViewById(R.id.textViewFacebook);
-        TextView txtViewTwitter = (TextView) findViewById(R.id.textViewTwitter);
-        TextView txtViewGooglePlus = (TextView) findViewById(R.id.textViewGooglePlus);
+        TextView txtIngresa = (TextView) findViewById(R.id.textViewIngresa);
+        TextView txtFacebook = (TextView) findViewById(R.id.textViewFacebook);
+        TextView txtTwitter = (TextView) findViewById(R.id.textViewTwitter);
+        TextView txtGooglePlus = (TextView) findViewById(R.id.textViewGooglePlus);
 
         //Carga las fuentes
         Typeface RobotoThin = Typeface.createFromAsset(this.getAssets(),"Roboto-Thin.ttf");
@@ -33,17 +33,19 @@ public class MainActivity extends ActionBarActivity {
         Typeface RobotoLight = Typeface.createFromAsset(this.getAssets(),"Roboto-Light.ttf");
 
         //Carga los icon-fonts
-        Typeface iconFonts = Typeface.createFromAsset(this.getAssets(),"iconFonts.ttf");
+        Typeface iconFonts = Typeface.createFromAsset(this.getAssets(),"fontawesome-webfont.ttf");
 
         //Asigna los estilos de fuentes
-        txtViewBienvenido.setTypeface(RobotoRegular);
-        txtViewIngresa.setTypeface(RobotoLight);
+        txtIngresa.setTypeface(RobotoLight);
 
         //Asigna los iconfonts
-        txtViewFacebook.setTypeface(iconFonts);
-        txtViewTwitter.setTypeface(iconFonts);
-        txtViewGooglePlus.setTypeface(iconFonts);
+        txtFacebook.setTypeface(iconFonts);
+        txtTwitter.setTypeface(iconFonts);
+        txtGooglePlus.setTypeface(iconFonts);
 
+        //Asigna el logo a imgZero
+        final ImageView logoZero = (ImageView) findViewById(R.id.imgZero);
+        logoZero.setImageResource(R.drawable.logo);
 
 
     }

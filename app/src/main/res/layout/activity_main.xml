@@ -2,39 +2,26 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#EDEDED">
+    android:background="#3A91DA">
 
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#3A91DA"
-        android:layout_weight="0.05">
+        android:background="#353535"
+        android:layout_weight="1.5">
 
-        <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="wrap_content"
+        <ImageView
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="9">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="Bienvenido"
-                android:id="@+id/textViewBienvenido"
-                android:singleLine="false"
-                android:textColor="#EDEDED"
-                android:textSize="28sp"
-                android:autoText="false"
-                android:gravity="center_vertical|center_horizontal" />
-        </LinearLayout>
+            android:id="@+id/imgZero" />
     </LinearLayout>
 
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="0.9">
+        android:layout_weight="9">
 
         <LinearLayout
             android:orientation="horizontal"
@@ -45,12 +32,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Ingresa con"
-                android:id="@+id/textViewIngresa"
+                android:id="@+id/txtIngresa"
                 android:gravity="center_vertical|center_horizontal"
-                android:textSize="22sp"
                 android:paddingTop="30dp"
                 android:paddingBottom="30dp"
-                android:textColor="#353535" />
+                android:textColor="#f0f0f0"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
         </LinearLayout>
 
         <LinearLayout
@@ -64,32 +51,35 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:id="@+id/textViewFacebook"
+                android:id="@+id/txtFacebook"
                 android:gravity="center_vertical|center_horizontal"
                 android:text="@string/icon_facebook"
                 android:textSize="60sp"
                 android:layout_marginLeft="25dp"
-                android:layout_marginRight="25dp" />
+                android:layout_marginRight="25dp"
+                android:textColor="#f0f0f0" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:id="@+id/textViewTwitter"
+                android:id="@+id/txtTwitter"
                 android:gravity="center_vertical|center_horizontal"
                 android:text="@string/icon_twitter"
                 android:textSize="60sp"
                 android:layout_marginLeft="25dp"
-                android:layout_marginRight="25dp" />
+                android:layout_marginRight="25dp"
+                android:textColor="#f0f0f0" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:id="@+id/textViewGooglePlus"
+                android:id="@+id/txtGooglePlus"
                 android:gravity="center_vertical|center_horizontal"
                 android:text="@string/icon_google_plus"
                 android:textSize="60sp"
                 android:layout_marginLeft="25dp"
-                android:layout_marginRight="25dp" />
+                android:layout_marginRight="25dp"
+                android:textColor="#f0f0f0" />
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>

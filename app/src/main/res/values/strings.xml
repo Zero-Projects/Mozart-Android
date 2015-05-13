@@ -2,11 +2,12 @@
     <string name="app_name">Mozart-Mobile-App</string>
     <string name="action_settings">Settings</string>
     <!---icon fonts-->
-    <string name="icon_pencil">&#xe905;</string>
-    <string name="icon_user">&#xe971;</string>
-    <string name="icon_exit">&#xea14;</string>
-    <string name="icon_google_plus">&#xea88;</string>
-    <string name="icon_facebook">&#xea8c;</string>
-    <string name="icon_twitter">&#xea91;</string>
+    <string name="icon_pencil">&#xf040;</string>
+    <string name="icon_lock">&#xf023;</string>
+    <string name="icon_user">&#xf0f0;</string>
+    <string name="icon_off">&#xf011;</string>
+    <string name="icon_google_plus">&#xf0d5;</string>
+    <string name="icon_facebook">&#xf09a;</string>
+    <string name="icon_twitter">&#xf099;</string>
 
 </resources>
