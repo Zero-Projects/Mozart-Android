@@ -46,7 +46,7 @@ public class MainActivity extends Activity {
 
         //Asigna el logo a imgZero
         final ImageView logoZero = (ImageView) findViewById(R.id.imgZero);
-        logoZero.setImageResource(R.drawable.logo);
+        logoZero.setImageResource(R.drawable.zero_logo_white);
         logoZero.setScaleY(1);
 
 
