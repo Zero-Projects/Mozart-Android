@@ -23,10 +23,6 @@ public class MainActivity extends Activity {
 
         //Declara los textView
         TextView txtIngresa = (TextView) findViewById(R.id.txtIngresa);
-        TextView txtDatosMozart = (TextView) findViewById(R.id.txtDatosMozart);
-        TextView txtEmail = (TextView) findViewById(R.id.txtEmail);
-        TextView txtPassword = (TextView) findViewById(R.id.txtPassword);
-        TextView txtEntra = (TextView) findViewById(R.id.txtEntrar);
         TextView txtFacebook = (TextView) findViewById(R.id.txtFacebook);
         TextView txtTwitter = (TextView) findViewById(R.id.txtTwitter);
         TextView txtGooglePlus = (TextView) findViewById(R.id.txtGooglePlus);
@@ -42,11 +38,6 @@ public class MainActivity extends Activity {
 
         //Asigna los estilos de fuentes
         txtIngresa.setTypeface(RobotoLight);
-        txtDatosMozart.setTypeface(RobotoLight);
-        txtEmail.setTypeface(RobotoLight);
-        txtPassword.setTypeface(RobotoLight);
-        txtEntra.setTypeface(RobotoLight);
-
 
         //Asigna los iconfonts
         txtFacebook.setTypeface(iconFonts);
