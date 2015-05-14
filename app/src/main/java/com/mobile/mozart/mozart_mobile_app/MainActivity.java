@@ -9,8 +9,11 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.TextureView;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebView;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -22,10 +25,18 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
 
         //Declara los textView
-        TextView txtIngresa = (TextView) findViewById(R.id.txtIngresa);
-        TextView txtFacebook = (TextView) findViewById(R.id.txtFacebook);
-        TextView txtTwitter = (TextView) findViewById(R.id.txtTwitter);
-        TextView txtGooglePlus = (TextView) findViewById(R.id.txtGooglePlus);
+        TextView txtIniciarSesion = (TextView) findViewById(R.id.txtIniciaSesion);
+        TextView iconFacebook = (TextView) findViewById(R.id.iconFacebook);
+        TextView iconTwitter = (TextView) findViewById(R.id.iconTwitter);
+        TextView iconGooglePlus = (TextView) findViewById(R.id.iconGooglePlus);
+        TextView txtEntra = (TextView) findViewById(R.id.txtEntrar);
+        TextView txtCuentaVinculada = (TextView)findViewById(R.id.txtCuentaVinculada);
+        TextView txtRegistrate = (TextView)findViewById(R.id.txtRegistrate);
+        TextView txtProblemas = (TextView)findViewById(R.id.txtProblemas);
+
+        //Declara los EditText
+        EditText txtEmail = (EditText)findViewById(R.id.txtEmail);
+        EditText txtPassword = (EditText)findViewById(R.id.txtPassword);
 
         //Carga las fuentes
         Typeface RobotoThin = Typeface.createFromAsset(this.getAssets(),"Roboto-Thin.ttf");
@@ -37,12 +48,19 @@ public class MainActivity extends Activity {
         Typeface iconFonts = Typeface.createFromAsset(this.getAssets(),"fontawesome-webfont.ttf");
 
         //Asigna los estilos de fuentes
-        txtIngresa.setTypeface(RobotoLight);
+        txtIniciarSesion.setTypeface(RobotoLight);
+        txtEntra.setTypeface(RobotoLight);
+        txtCuentaVinculada.setTypeface(RobotoLight);
+        txtEmail.setTypeface(RobotoLight);
+        txtPassword.setTypeface(RobotoLight);
+        txtRegistrate.setTypeface(RobotoLight);
+        txtProblemas.setTypeface(RobotoLight);
 
         //Asigna los iconfonts
-        txtFacebook.setTypeface(iconFonts);
-        txtTwitter.setTypeface(iconFonts);
-        txtGooglePlus.setTypeface(iconFonts);
+        iconFacebook.setTypeface(iconFonts);
+        iconTwitter.setTypeface(iconFonts);
+        iconGooglePlus.setTypeface(iconFonts);
+        txtEntra.setTypeface(iconFonts);
 
         //Asigna el logo a imgZero
         final ImageView logoZero = (ImageView) findViewById(R.id.imgZero);
