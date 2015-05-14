@@ -10,7 +10,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center_vertical|center_horizontal"
-        android:layout_marginTop="10dp">
+        android:layout_marginBottom="20dp">
 
         <ImageView
             android:layout_width="wrap_content"
@@ -46,6 +46,18 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/iconEmail"
+                    android:layout_weight="1"
+                    android:textSize="16sp"
+                    android:textColor="#3A91DA"
+                    android:padding="5dp"
+                    android:text="@string/icon_envelope"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:background="#F0F0F0" />
+
                 <EditText
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -61,23 +73,25 @@
                     android:layout_marginRight="0dp"
                     android:layout_weight="9" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/iconEmail"
-                    android:layout_weight="1"
-                    android:textSize="16dp"
-                    android:textColor="#3A91DA"
-                    android:padding="5dp"
-                    android:text="@string/icon_envelope"
-                    android:gravity="center_vertical|center_horizontal"
-                    android:background="#F0F0F0" />
             </LinearLayout>
 
             <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/iconPassword"
+                    android:layout_weight="1"
+                    android:layout_marginTop="10dp"
+                    android:textSize="16sp"
+                    android:textColor="#3A91DA"
+                    android:padding="5dp"
+                    android:text="@string/icon_lock"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:background="#F0F0F0" />
 
                 <EditText
                     android:layout_width="wrap_content"
@@ -94,18 +108,6 @@
                     android:textSize="16sp"
                     android:inputType="textPassword" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/iconPassword"
-                    android:layout_weight="1"
-                    android:layout_marginTop="10dp"
-                    android:textSize="16dp"
-                    android:textColor="#3A91DA"
-                    android:padding="5dp"
-                    android:text="@string/icon_lock"
-                    android:gravity="center_vertical|center_horizontal"
-                    android:background="#F0F0F0" />
             </LinearLayout>
 
             <TextView
@@ -143,7 +145,8 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp"
-            android:gravity="center_vertical|center_horizontal">
+            android:gravity="center_vertical|center_horizontal"
+            android:layout_marginBottom="10dp">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -183,30 +186,29 @@
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             android:gravity="center_vertical|right"
             android:paddingLeft="30dp"
-            android:paddingRight="30dp">
+            android:paddingRight="30dp"
+            android:paddingBottom="5dp">
 
             <TextView
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:text="Registrate aquí"
+                android:layout_height="wrap_content"
+                android:text="Registrate"
                 android:id="@+id/txtRegistrate"
-                android:textSize="16sp"
+                android:textSize="14sp"
                 android:textColor="#F0F0F0"
-                android:padding="5dp" />
+                android:gravity="center_vertical|center_horizontal" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/iconRegistrate"
-                android:text="@string/icon_user_plus"
+                android:text="@string/icon_pencil"
                 android:textColor="#f0f0f0"
-                android:textSize="20sp"
-                android:padding="5dp"
-                android:paddingLeft="10dp"
-                android:paddingRight="10dp" />
+                android:textSize="16sp"
+                android:paddingLeft="10dp" />
         </LinearLayout>
 
         <LinearLayout
@@ -223,18 +225,17 @@
                 android:text="¿Problemas para inicar?"
                 android:id="@+id/txtProblemas"
                 android:textColor="#f0f0f0"
-                android:textSize="16sp" />
+                android:textSize="14sp"
+                android:gravity="center_vertical|center_horizontal" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/iconProblemas"
-                android:padding="5dp"
-                android:paddingLeft="10dp"
-                android:paddingRight="10dp"
-                android:text="@string/icon_frown_o"
-                android:textSize="20sp"
-                android:textColor="#f0f0f0" />
+                android:text="@string/icon_question"
+                android:textSize="16sp"
+                android:textColor="#f0f0f0"
+                android:paddingLeft="10dp" />
         </LinearLayout>
 
     </LinearLayout>
