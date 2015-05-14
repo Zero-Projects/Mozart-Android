@@ -21,10 +21,10 @@ public class MainActivity extends ActionBarActivity {
         setContentView(R.layout.activity_main);
 
         //Declara los textView
-        TextView txtIngresa = (TextView) findViewById(R.id.textViewIngresa);
-        TextView txtFacebook = (TextView) findViewById(R.id.textViewFacebook);
-        TextView txtTwitter = (TextView) findViewById(R.id.textViewTwitter);
-        TextView txtGooglePlus = (TextView) findViewById(R.id.textViewGooglePlus);
+        TextView txtIngresa = (TextView) findViewById(R.id.txtIngresa);
+        TextView txtFacebook = (TextView) findViewById(R.id.txtFacebook);
+        TextView txtTwitter = (TextView) findViewById(R.id.txtTwitter);
+        TextView txtGooglePlus = (TextView) findViewById(R.id.txtGooglePlus);
 
         //Carga las fuentes
         Typeface RobotoThin = Typeface.createFromAsset(this.getAssets(),"Roboto-Thin.ttf");
@@ -46,6 +46,7 @@ public class MainActivity extends ActionBarActivity {
         //Asigna el logo a imgZero
         final ImageView logoZero = (ImageView) findViewById(R.id.imgZero);
         logoZero.setImageResource(R.drawable.logo);
+        logoZero.setScaleY(1);
 
 
     }
