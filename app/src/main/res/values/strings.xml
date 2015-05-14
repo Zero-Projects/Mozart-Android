@@ -1,6 +1,17 @@
 <resources>
     <string name="app_name">Mozart-Mobile-App</string>
-
-    <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <!---icon fonts-->
+    <string name="icon_pencil">&#xf040;</string>
+    <string name="icon_lock">&#xf023;</string>
+    <string name="icon_user">&#xf0f0;</string>
+    <string name="icon_off">&#xf011;</string>
+    <string name="icon_google_plus">&#xf0d5;</string>
+    <string name="icon_facebook">&#xf09a;</string>
+    <string name="icon_twitter">&#xf099;</string>
+    <string name="icon_sign_in">&#xf090;</string>
+    <string name="icon_plus">&#xf067;</string>
+    <string name="icon_question">&#xf128;</string>
+    <string name="icon_envelope">&#xf0e0;</string>
+
 </resources>
