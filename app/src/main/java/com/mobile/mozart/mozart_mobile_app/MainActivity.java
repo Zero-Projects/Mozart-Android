@@ -26,13 +26,19 @@ public class MainActivity extends Activity {
 
         //Declara los textView
         TextView txtIniciarSesion = (TextView) findViewById(R.id.txtIniciaSesion);
-        TextView iconFacebook = (TextView) findViewById(R.id.iconFacebook);
-        TextView iconTwitter = (TextView) findViewById(R.id.iconTwitter);
-        TextView iconGooglePlus = (TextView) findViewById(R.id.iconGooglePlus);
-        TextView txtEntra = (TextView) findViewById(R.id.txtEntrar);
+        TextView iconEntrar = (TextView) findViewById(R.id.iconEntrar);
         TextView txtCuentaVinculada = (TextView)findViewById(R.id.txtCuentaVinculada);
         TextView txtRegistrate = (TextView)findViewById(R.id.txtRegistrate);
         TextView txtProblemas = (TextView)findViewById(R.id.txtProblemas);
+
+        TextView iconFacebook = (TextView) findViewById(R.id.iconFacebook);
+        TextView iconTwitter = (TextView) findViewById(R.id.iconTwitter);
+        TextView iconGooglePlus = (TextView) findViewById(R.id.iconGooglePlus);
+        TextView iconEmail = (TextView) findViewById(R.id.iconEmail);
+        TextView iconPassword = (TextView) findViewById(R.id.iconPassword);
+        TextView iconRegistrate = (TextView) findViewById(R.id.iconRegistrate);
+        TextView iconProblemas = (TextView) findViewById(R.id.iconProblemas);
+
 
         //Declara los EditText
         EditText txtEmail = (EditText)findViewById(R.id.txtEmail);
@@ -49,7 +55,7 @@ public class MainActivity extends Activity {
 
         //Asigna los estilos de fuentes
         txtIniciarSesion.setTypeface(RobotoLight);
-        txtEntra.setTypeface(RobotoLight);
+        iconEntrar.setTypeface(RobotoLight);
         txtCuentaVinculada.setTypeface(RobotoLight);
         txtEmail.setTypeface(RobotoLight);
         txtPassword.setTypeface(RobotoLight);
@@ -60,7 +66,12 @@ public class MainActivity extends Activity {
         iconFacebook.setTypeface(iconFonts);
         iconTwitter.setTypeface(iconFonts);
         iconGooglePlus.setTypeface(iconFonts);
-        txtEntra.setTypeface(iconFonts);
+        iconEntrar.setTypeface(iconFonts);
+        iconEmail.setTypeface(iconFonts);
+        iconPassword.setTypeface(iconFonts);
+        iconRegistrate.setTypeface(iconFonts);
+        iconProblemas.setTypeface(iconFonts);
+
 
         //Asigna el logo a imgZero
         final ImageView logoZero = (ImageView) findViewById(R.id.imgZero);

@@ -111,7 +111,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/txtEntrar"
+                android:id="@+id/iconEntrar"
                 android:textColor="#F0F0F0"
                 android:padding="7dp"
                 android:textSize="20sp"
@@ -200,7 +200,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/iconRegistro"
+                android:id="@+id/iconRegistrate"
                 android:text="@string/icon_user_plus"
                 android:textColor="#f0f0f0"
                 android:textSize="20sp"
@@ -228,7 +228,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/textView2"
+                android:id="@+id/iconProblemas"
                 android:padding="5dp"
                 android:paddingLeft="10dp"
                 android:paddingRight="10dp"
