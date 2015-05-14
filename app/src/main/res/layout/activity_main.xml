@@ -14,7 +14,7 @@
 
         <ImageView
             android:layout_width="wrap_content"
-            android:layout_height="60dp"
+            android:layout_height="40dp"
             android:id="@+id/imgZero" />
     </LinearLayout>
 
@@ -36,7 +36,7 @@
                 android:id="@+id/txtIngresa"
                 android:gravity="center_vertical|center_horizontal"
                 android:textColor="#f0f0f0"
-                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textAppearance="?android:attr/textAppearanceMedium"
                 android:paddingTop="10dp"
                 android:paddingBottom="10dp" />
         </LinearLayout>
@@ -55,7 +55,7 @@
                 android:id="@+id/txtFacebook"
                 android:gravity="center_vertical|center_horizontal"
                 android:text="@string/icon_facebook"
-                android:textSize="60sp"
+                android:textSize="40dp"
                 android:layout_marginLeft="25dp"
                 android:layout_marginRight="25dp"
                 android:textColor="#f0f0f0" />
@@ -66,7 +66,7 @@
                 android:id="@+id/txtTwitter"
                 android:gravity="center_vertical|center_horizontal"
                 android:text="@string/icon_twitter"
-                android:textSize="60sp"
+                android:textSize="40dp"
                 android:layout_marginLeft="25dp"
                 android:layout_marginRight="25dp"
                 android:textColor="#f0f0f0" />
@@ -77,10 +77,72 @@
                 android:id="@+id/txtGooglePlus"
                 android:gravity="center_vertical|center_horizontal"
                 android:text="@string/icon_google_plus"
-                android:textSize="60sp"
+                android:textSize="40dp"
                 android:layout_marginLeft="25dp"
                 android:layout_marginRight="25dp"
                 android:textColor="#f0f0f0" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical|center_horizontal"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="O usa tus datos de Mozart"
+                android:id="@+id/txtDatosMozart"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#F0F0F0" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:gravity="center_vertical|center_horizontal">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtEmail"
+                android:hint="Email"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:background="#F0F0F0"
+                android:singleLine="true"
+                android:textColorHint="#8D8D8D"
+                android:padding="5dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:textColor="#3A91DA" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtPassword"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:padding="5dp"
+                android:singleLine="true"
+                android:textColorHint="#8D8D8D"
+                android:background="#F0F0F0"
+                android:layout_marginTop="10dp"
+                android:hint="Contraseña"
+                android:textColor="#3A91DA" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Entrar"
+                android:id="@+id/txtEntrar"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:paddingTop="25dp"
+                android:textColor="#F0F0F0" />
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>

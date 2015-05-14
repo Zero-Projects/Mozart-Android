@@ -1,5 +1,6 @@
 package com.mobile.mozart.mozart_mobile_app;
 
+import android.app.Activity;
 import android.app.Application;
 import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
@@ -14,7 +15,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 
-public class MainActivity extends ActionBarActivity {
+public class MainActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
