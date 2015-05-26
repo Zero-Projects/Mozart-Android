@@ -25,7 +25,6 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
 
         //Declara los textView
-        TextView txtIniciarSesion = (TextView) findViewById(R.id.txtIniciaSesion);
         TextView iconEntrar = (TextView) findViewById(R.id.iconEntrar);
         TextView txtCuentaVinculada = (TextView)findViewById(R.id.txtCuentaVinculada);
         TextView txtRegistrate = (TextView)findViewById(R.id.txtRegistrate);
@@ -54,7 +53,6 @@ public class MainActivity extends Activity {
         Typeface iconFonts = Typeface.createFromAsset(this.getAssets(),"fontawesome-webfont.ttf");
 
         //Asigna los estilos de fuentes
-        txtIniciarSesion.setTypeface(RobotoLight);
         iconEntrar.setTypeface(RobotoLight);
         txtCuentaVinculada.setTypeface(RobotoLight);
         txtEmail.setTypeface(RobotoLight);
