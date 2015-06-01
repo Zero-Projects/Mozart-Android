@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff2f2f2"
+    android:weightSum="1">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/lineartitulo"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Crear Obra"
+            android:id="@+id/textCrearObra"
+            android:textColor="#fff96717"
+            android:textSize="20sp"
+            android:layout_gravity="center_horizontal"
+            android:textIsSelectable="true" />
+
+
+        <EditText
+            android:layout_width="241dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtTitulo"
+            android:hint="Titulo"
+            android:background="#F0F0F0"
+            android:singleLine="true"
+            android:textColorHint="#8D8D8D"
+            android:padding="5dp"
+            android:textColor="#3A91DA"
+            android:textSize="16sp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="#ffebebeb"
+            android:clickable="false" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/lineardescripcion"
+        android:layout_marginTop="20dp"
+        android:weightSum="1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Descripción de la Obra"
+            android:id="@+id/textDescripcion"
+            android:textColor="#ff747474"
+            android:textSize="20sp"
+            android:layout_gravity="center_horizontal"
+            android:textIsSelectable="true" />
+        <EditText
+            android:layout_width="241dp"
+            android:layout_height="100dp"
+            android:id="@+id/Descripcion"
+            android:inputType="textMultiLine"
+            android:background="#ffffff"
+            android:padding="5dp"
+            android:textColor="#3A91DA"
+            android:textSize="16sp"
+            android:ems="10"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="#fff"
+            android:clickable="false"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="2.27" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearcategoria"
+        android:layout_marginTop="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Categorias"
+                android:id="@+id/textCategoria"
+                android:textColor="#ff747474"
+                android:textSize="20sp"
+                android:layout_gravity="center_horizontal"
+                android:textIsSelectable="true" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearsubir"
+        android:layout_marginTop="20dp">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Subir Obra"
+                android:id="@+id/button"
+                android:layout_gravity="center_horizontal" />
+    </LinearLayout>
+
+</LinearLayout>

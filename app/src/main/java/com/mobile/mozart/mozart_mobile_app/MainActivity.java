@@ -20,9 +20,9 @@ import android.widget.TextView;
 
 public class MainActivity extends Activity {
     @Override
-    protected void onCreate(Bundle savedInstanceState){
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        protected void onCreate(Bundle savedInstanceState){
+            super.onCreate(savedInstanceState);
+            setContentView(R.layout.activity_main);
 
         //Declara los textView
         TextView txtIniciarSesion = (TextView) findViewById(R.id.txtIniciaSesion);
