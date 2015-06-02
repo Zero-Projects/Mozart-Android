@@ -3,113 +3,190 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#fff2f2f2"
-    android:weightSum="1">
+    android:weightSum="1"
+    android:id="@+id/subirobras">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearvista"
+        android:layout_marginTop="40dp"
+        android:layout_gravity="center"
+        android:background="#fff"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="40dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearfondo"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:background="#fff96717">
 
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/lineartitulo"
-        android:layout_marginTop="20dp">
+        android:id="@+id/linearTitulo"
+        android:layout_gravity="center"
+        android:background="#fffefefe"
+        android:layout_marginBottom="2.5dp">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Crear Obra"
             android:id="@+id/textCrearObra"
-            android:textColor="#fff96717"
+            android:textColor="#ff424242"
             android:textSize="20sp"
             android:layout_gravity="center_horizontal"
-            android:textIsSelectable="true" />
+            android:textIsSelectable="true"
+            android:textStyle="bold" />
 
-
-        <EditText
-            android:layout_width="241dp"
-            android:layout_height="wrap_content"
-            android:id="@+id/txtTitulo"
-            android:hint="Titulo"
-            android:background="#F0F0F0"
-            android:singleLine="true"
-            android:textColorHint="#8D8D8D"
-            android:padding="5dp"
-            android:textColor="#3A91DA"
-            android:textSize="16sp"
-            android:layout_marginLeft="0dp"
-            android:layout_marginRight="0dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="20dp"
-            android:backgroundTint="#ffebebeb"
-            android:clickable="false" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/lineardescripcion"
-        android:layout_marginTop="20dp"
-        android:weightSum="1">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Descripción de la Obra"
-            android:id="@+id/textDescripcion"
-            android:textColor="#ff747474"
-            android:textSize="20sp"
-            android:layout_gravity="center_horizontal"
-            android:textIsSelectable="true" />
-        <EditText
-            android:layout_width="241dp"
-            android:layout_height="100dp"
-            android:id="@+id/Descripcion"
-            android:inputType="textMultiLine"
-            android:background="#ffffff"
-            android:padding="5dp"
-            android:textColor="#3A91DA"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Título"
+            android:id="@+id/Titulo"
+            android:layout_gravity="top"
+            android:layout_marginLeft="5dp"
             android:textSize="16sp"
+            android:textColor="#ff424242"
+            android:textColorHint="#ff424242"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp" />
+
+        <EditText
+            android:layout_width="251dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtTitulo"
+            android:background="#fffefefe"
+            android:singleLine="true"
+            android:textColorHint="#8D8D8D"
+            android:padding="5dp"
+            android:textColor="#ffcc4f15"
+            android:textSize="16sp"
+            android:layout_marginLeft="5dp"
+            android:layout_gravity="top"
+            android:layout_marginTop="5dp"
+            android:clickable="true"
+            android:autoText="false"
+            android:editable="false"
+            android:elegantTextHeight="false" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/linearDescripcion"
+            android:layout_gravity="center"
+            android:background="#fffefefe"
+            android:layout_marginBottom="2.5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Descripción de la obra"
+            android:id="@+id/Descripcion"
+            android:layout_gravity="top"
+            android:layout_marginLeft="5dp"
+            android:textSize="16sp"
+            android:textColor="#ff424242"
+            android:textColorHint="#ff424242"
+            android:textStyle="bold"
+            android:layout_marginTop="15dp" />
+
+        <EditText
+            android:layout_width="251dp"
+            android:layout_height="wrap_content"
+            android:inputType="textMultiLine"
             android:ems="10"
-            android:layout_marginLeft="0dp"
-            android:layout_marginRight="0dp"
-            android:layout_marginTop="20dp"
-            android:backgroundTint="#fff"
-            android:clickable="false"
+            android:id="@+id/editDescripcion"
+            android:layout_gravity="top"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:background="#fffefefe"
+            android:padding="5dp"
+            android:textColor="#ffcc4f15"
+            android:textColorHint="#8D8D8D"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/linearcategoria"
+        android:layout_gravity="center"
+            android:background="#fffefefe"
+        android:layout_marginBottom="2.5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Categoría"
+            android:id="@+id/Categoria"
+            android:layout_gravity="top"
+            android:layout_marginLeft="5dp"
+            android:textSize="16sp"
+            android:textColor="#ff424242"
+            android:textColorHint="#ff424242"
+            android:textStyle="bold"
+            android:layout_marginTop="15dp" />
+
+        <EditText
+            android:layout_width="251dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtCategoria"
+            android:background="#fffefefe"
+            android:singleLine="true"
+            android:textColorHint="#8D8D8D"
+            android:padding="5dp"
+            android:textColor="#ffcc4f15"
+            android:textSize="16sp"
+            android:layout_gravity="top"
+            android:clickable="true"
+            android:autoText="false"
+            android:editable="false"
+            android:elegantTextHeight="false"
+            android:hint="Selecciona la categoría"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearboton"
+        android:layout_gravity="center"
+        android:background="#fffefefe">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="Subir obra"
+            android:id="@+id/button"
             android:layout_gravity="center_horizontal"
-            android:layout_weight="2.27" />
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="5dp"
+            android:background="#fff96717"
+            android:textColor="#fff"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+    </LinearLayout>
 
     </LinearLayout>
 
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/linearcategoria"
-        android:layout_marginTop="20dp">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Categorias"
-                android:id="@+id/textCategoria"
-                android:textColor="#ff747474"
-                android:textSize="20sp"
-                android:layout_gravity="center_horizontal"
-                android:textIsSelectable="true" />
 
-    </LinearLayout>
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/linearsubir"
-        android:layout_marginTop="20dp">
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Subir Obra"
-                android:id="@+id/button"
-                android:layout_gravity="center_horizontal" />
-    </LinearLayout>
 
 </LinearLayout>
