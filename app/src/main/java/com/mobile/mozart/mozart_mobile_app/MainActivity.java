@@ -1,28 +1,22 @@
 package com.mobile.mozart.mozart_mobile_app;
 
-import android.app.Activity;
-import android.app.Application;
 import android.graphics.Typeface;
-import android.graphics.drawable.Drawable;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
-import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.TextureView;
-import android.view.View;
-import android.view.ViewGroup;
-import android.webkit.WebView;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 
-public class MainActivity extends Activity {
+public class MainActivity extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
 
         //Declara los textView
         TextView iconEntrar = (TextView) findViewById(R.id.iconEntrar);
@@ -73,7 +67,7 @@ public class MainActivity extends Activity {
 
         //Asigna el logo a imgZero
         final ImageView logoZero = (ImageView) findViewById(R.id.imgZero);
-        logoZero.setImageResource(R.drawable.zero_logo_white);
+        logoZero.setImageResource(R.drawable.orange_logo);
         logoZero.setScaleY(1);
 
 
