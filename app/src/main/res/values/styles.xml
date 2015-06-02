@@ -2,19 +2,13 @@
 
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="colorPrimary">@color/Primary</item>
-        <item name="colorPrimaryDark">@color/PrimaryDark</item>
-        <item name="android:colorBackground">@color/Background</item>
-        <item name="colorAccent">@color/Accent</item>
-        <item name="android:textColorPrimary">@color/textColorPrimary</item>
-        <item name="android:textColorHint">@color/textColorHint</item>
+        <item name="colorPrimaryDark">@color/primary_dark</item>
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorAccent">@color/accent</item>
+        <item name="android:colorBackground">@color/background</item>
+        <item name="android:icon">@color/icons</item>
+        <item name="android:textColorPrimary">@color/primary_text</item>
+        <item name="android:textColorSecondary">@color/secondary_text</item>
     </style>
-
-    <color name="Background">#FAFAFA</color>
-    <color name="Primary">#FA6717</color>
-    <color name="PrimaryDark">#F4511E</color>
-    <color name="Accent">#FFD180</color>
-    <color name="textColorPrimary">#252525</color>
-    <color name="textColorHint">#8D8D8D</color>
 
 </resources>

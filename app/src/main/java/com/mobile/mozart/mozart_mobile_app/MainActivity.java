@@ -11,40 +11,64 @@ import android.widget.TextView;
 
 
 public class MainActivity extends ActionBarActivity {
+
+    TextView iconEntrar,txtCuentaVinculada,txtRegistrate,txtProblemas;
+    TextView iconFacebook,iconTwitter,iconGooglePlus,iconEmail,iconPassword,iconRegistrate,iconProblemas;
+    EditText txtEmail, txtPassword;
+    Typeface RobotoThin,RobotoRegular,RobotoMedium,RobotoLight,iconFonts,enterFont;
+    ImageView logoZero;
+
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        cargarFuentes();
+    }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
+    }
 
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
 
-        //Declara los textView
-        TextView iconEntrar = (TextView) findViewById(R.id.iconEntrar);
-        TextView txtCuentaVinculada = (TextView)findViewById(R.id.txtCuentaVinculada);
-        TextView txtRegistrate = (TextView)findViewById(R.id.txtRegistrate);
-        TextView txtProblemas = (TextView)findViewById(R.id.txtProblemas);
+        //noinspection SimplifiableIfStatement
+        if (id == R.id.action_settings) {
+            return true;
+        }
 
-        TextView iconFacebook = (TextView) findViewById(R.id.iconFacebook);
-        TextView iconTwitter = (TextView) findViewById(R.id.iconTwitter);
-        TextView iconGooglePlus = (TextView) findViewById(R.id.iconGooglePlus);
-        TextView iconEmail = (TextView) findViewById(R.id.iconEmail);
-        TextView iconPassword = (TextView) findViewById(R.id.iconPassword);
-        TextView iconRegistrate = (TextView) findViewById(R.id.iconRegistrate);
-        TextView iconProblemas = (TextView) findViewById(R.id.iconProblemas);
+        return super.onOptionsItemSelected(item);
+    }
+    public void cargarFuentes(){
+        iconEntrar = (TextView) findViewById(R.id.iconEntrar);
+        txtCuentaVinculada = (TextView)findViewById(R.id.txtCuentaVinculada);
+        txtRegistrate = (TextView)findViewById(R.id.txtRegistrate);
+        txtProblemas = (TextView)findViewById(R.id.txtProblemas);
 
+        iconFacebook = (TextView) findViewById(R.id.iconFacebook);
+        iconTwitter = (TextView) findViewById(R.id.iconTwitter);
+        iconGooglePlus = (TextView) findViewById(R.id.iconGooglePlus);
+        iconEmail = (TextView) findViewById(R.id.iconEmail);
+        iconPassword = (TextView) findViewById(R.id.iconPassword);
+        iconRegistrate = (TextView) findViewById(R.id.iconRegistrate);
+        iconProblemas = (TextView) findViewById(R.id.iconProblemas);
 
-        //Declara los EditText
-        EditText txtEmail = (EditText)findViewById(R.id.txtEmail);
-        EditText txtPassword = (EditText)findViewById(R.id.txtPassword);
+        txtEmail = (EditText)findViewById(R.id.txtEmail);
+        txtPassword = (EditText)findViewById(R.id.txtPassword);
 
         //Carga las fuentes
-        Typeface RobotoThin = Typeface.createFromAsset(this.getAssets(),"Roboto-Thin.ttf");
-        Typeface RobotoRegular = Typeface.createFromAsset(this.getAssets(),"Roboto-Regular.ttf");
-        Typeface RobotoMedium = Typeface.createFromAsset(this.getAssets(),"Roboto-Medium.ttf");
-        Typeface RobotoLight = Typeface.createFromAsset(this.getAssets(),"Roboto-Light.ttf");
+        RobotoThin = Typeface.createFromAsset(this.getAssets(),"Roboto-Thin.ttf");
+        RobotoRegular = Typeface.createFromAsset(this.getAssets(),"Roboto-Regular.ttf");
+        RobotoMedium = Typeface.createFromAsset(this.getAssets(),"Roboto-Medium.ttf");
+        RobotoLight = Typeface.createFromAsset(this.getAssets(),"Roboto-Light.ttf");
 
         //Carga los icon-fonts
-        Typeface iconFonts = Typeface.createFromAsset(this.getAssets(),"fontawesome-webfont.ttf");
+        iconFonts = Typeface.createFromAsset(this.getAssets(), "fontawesome-webfont.ttf");
+        enterFont = Typeface.createFromAsset(this.getAssets(), "icomoon.ttf");
 
         //Asigna los estilos de fuentes
         iconEntrar.setTypeface(RobotoLight);
@@ -58,39 +82,15 @@ public class MainActivity extends ActionBarActivity {
         iconFacebook.setTypeface(iconFonts);
         iconTwitter.setTypeface(iconFonts);
         iconGooglePlus.setTypeface(iconFonts);
-        iconEntrar.setTypeface(iconFonts);
+        iconEntrar.setTypeface(enterFont);
         iconEmail.setTypeface(iconFonts);
         iconPassword.setTypeface(iconFonts);
         iconRegistrate.setTypeface(iconFonts);
         iconProblemas.setTypeface(iconFonts);
 
-
         //Asigna el logo a imgZero
-        final ImageView logoZero = (ImageView) findViewById(R.id.imgZero);
-        logoZero.setImageResource(R.drawable.orange_logo);
+        logoZero = (ImageView) findViewById(R.id.imgZero);
+        logoZero.setImageResource(R.drawable.zero_logo_white);
         logoZero.setScaleY(1);
-
-
-    }
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
     }
 }
