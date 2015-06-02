@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Mozart-Mobile-App</string>
+    <string name="app_name">MozArt</string>
     <string name="action_settings">Settings</string>
     <!---icon fonts-->
     <string name="icon_pencil">&#xf040;</string>

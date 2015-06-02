@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#3A91DA"
+    android:background="#FA6717"
     android:gravity="center_vertical|center_horizontal">
 
     <LinearLayout
@@ -43,7 +43,7 @@
                     android:id="@+id/iconEmail"
                     android:layout_weight="1"
                     android:textSize="16sp"
-                    android:textColor="#3A91DA"
+                    android:textColor="#FA6717"
                     android:padding="5dp"
                     android:text="@string/icon_envelope"
                     android:gravity="center_vertical|center_horizontal"
@@ -78,7 +78,7 @@
                     android:layout_weight="1"
                     android:layout_marginTop="10dp"
                     android:textSize="16sp"
-                    android:textColor="#3A91DA"
+                    android:textColor="#FA6717"
                     android:padding="5dp"
                     android:text="@string/icon_lock"
                     android:gravity="center_vertical|center_horizontal"
