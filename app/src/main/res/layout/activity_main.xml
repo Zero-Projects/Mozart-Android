@@ -108,7 +108,17 @@
                 android:layout_height="match_parent"
                 android:layout_marginTop="10dp">
 
-                <TextView
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"                    android:textSize="24sp"
+                    android:text="@string/icon_question"
+                    android:background="@color/primary"
+                    android:scaleType="fitXY"
+                    android:adjustViewBounds="true"
+                    android:gravity="center_vertical|right"
+                    android:id="@+id/imageButtonProblemas" />
+
+                <!--<TextView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:id="@+id/iconProblemas"
@@ -117,7 +127,7 @@
                     android:textColor="@color/icons"
                     android:paddingRight="5dp"
                     android:layout_weight="1" />
-
+                -->
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
@@ -128,7 +138,7 @@
                     android:gravity="center_vertical"
                     android:layout_weight="10" />
 
-                <TextView
+                <!--<TextView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:id="@+id/iconEntrar"
@@ -140,6 +150,15 @@
                     android:layout_gravity="right"
                     android:gravity="center_vertical|right"
                     android:textIsSelectable="false" />
+                -->
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"                    android:textSize="24sp"
+                    android:text="@string/icon_enter"
+                    android:scaleType="fitXY"
+                    android:adjustViewBounds="true"
+                    android:gravity="center_vertical|right"
+                    android:id="@+id/imageButtonEntrar" />
             </LinearLayout>
 
         </LinearLayout>
