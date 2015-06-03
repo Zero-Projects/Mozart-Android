@@ -1,4 +1,4 @@
-package com.mozart;
+package com.mozart.mozart_android;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
@@ -9,10 +9,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import com.mobile.mozart.mozart_android.R;
-
-
-public class CargarObras extends ActionBarActivity{
+public class CargarObras extends ActionBarActivity {
     Toolbar toolbar;
     TextView textViewCrearObra,textViewTitulo,textViewDescripcion,textViewCategoria;
     EditText editTextTitulo,editTextDescripcion,editTextCategoria;

@@ -1,14 +1,12 @@
-package com.mozart;
+package com.mozart.mozart_android;
 
-        import java.util.Timer;
-        import java.util.TimerTask;
-        import android.content.Intent;
-        import android.content.pm.ActivityInfo;
-        import android.os.Bundle;
-        import android.support.v7.app.ActionBarActivity;
-        import android.view.Window;
-
-        import com.mobile.mozart.mozart_android.R;
+import android.content.Intent;
+import android.content.pm.ActivityInfo;
+import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
+import android.view.Window;
+import java.util.Timer;
+import java.util.TimerTask;
 
 public class SplashScreenActivity extends ActionBarActivity {
 

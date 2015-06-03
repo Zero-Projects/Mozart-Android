@@ -1,4 +1,4 @@
-package com.mozart;
+package com.mozart.mozart_android;
 
 import android.graphics.Typeface;
 import android.os.Bundle;
@@ -9,8 +9,6 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
-
-import com.mobile.mozart.mozart_android.R;
 
 public class MainActivity extends ActionBarActivity {
     TextView iconEntrar,txtCuentaVinculada,textViewRegistrate,textViewProblemas,iconFacebook,
