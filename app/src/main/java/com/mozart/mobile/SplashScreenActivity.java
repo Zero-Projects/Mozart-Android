@@ -1,4 +1,4 @@
-package com.mobile.mozart.mozart_mobile_app;
+package com.mozart.mobile;
 
 /**
  * Created by Liz on 26/05/2015.
@@ -26,7 +26,7 @@ public class SplashScreenActivity extends Activity {
 
         requestWindowFeature(Window.FEATURE_NO_TITLE);
 
-        setContentView(R.layout.splash_screen);
+        setContentView(com.mobile.mozart.mozart_android.R.layout.splash_screen);
 
         TimerTask task = new TimerTask() {
             @Override

@@ -1,28 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.mobile.mozart.mozart_mobile_app" >
+    package="com.mobile.mozart.mozart_android" >
 
     <application
         android:allowBackup="true"
         android:icon="@mipmap/logo"
-        android:label="Mozart-Mobile-App"
+        android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="com.mobile.mozart.mozart_mobile_app.SplashScreenActivity"
-            android:label="MozArt">
+            android:name="com.mozart.mobile.SplashScreenActivity"
+            android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
-            android:name="com.mobile.mozart.mozart_mobile_app.MainActivity"
-            android:label="@string/app_name" >
-
+            android:name="com.mozart.mobile.MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
         </activity>
         <activity
-            android:name="com.mobile.mozart.mozart_mobile_app.carga_obras"
+            android:name="com.mozart.mobile.carga_obras"
             android:label="@string/app_name" >
         </activity>
     </application>
