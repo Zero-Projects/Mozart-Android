@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:weightSum="1"
+    android:id="@+id/vistageneral"
+    android:padding="15dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="295dp"
+        android:layout_height="0dp"
+        android:id="@+id/linearvista"
+        android:layout_marginTop="40dp"
+        android:layout_gravity="center"
+        android:background="@color/icons"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="40dp"
+        android:layout_weight="0.15"
+        android:weightSum="1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mozart "
+            android:id="@+id/textMozart"
+            android:textColor="#ff424242"
+            android:textSize="20sp"
+            android:layout_gravity="center_horizontal"
+            android:textIsSelectable="true"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="106dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Obras"
+            android:id="@+id/Obras"
+            android:layout_gravity="top"
+            android:layout_marginLeft="5dp"
+            android:textSize="28sp"
+            android:textColor="#ff424242"
+            android:textColorHint="#ff424242"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:layout_weight="0.70" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/textView"
+        android:background="@color/primary" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/scrollView"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="0.66"
+        android:background="@color/icons">
+
+        <!--<ImageView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:id="@+id/image2"-->
+            <!--android:background="@mipmap/ic_launcher"-->
+            <!--android:layout_gravity="center_horizontal" />-->
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView"
+            android:src="@drawable/splashscreen3"/>
+    </ScrollView>
+
+
+</LinearLayout>

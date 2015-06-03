@@ -1,18 +1,16 @@
-package com.mozart.mobile;
+package com.mozart;
 
-/**
- * Created by Liz on 26/05/2015.
- */
         import java.util.Timer;
         import java.util.TimerTask;
-
-        import android.app.Activity;
         import android.content.Intent;
         import android.content.pm.ActivityInfo;
         import android.os.Bundle;
+        import android.support.v7.app.ActionBarActivity;
         import android.view.Window;
 
-public class SplashScreenActivity extends Activity {
+        import com.mobile.mozart.mozart_android.R;
+
+public class SplashScreenActivity extends ActionBarActivity {
 
 
     private static final long SPLASH_SCREEN_DELAY = 3000;
@@ -26,7 +24,7 @@ public class SplashScreenActivity extends Activity {
 
         requestWindowFeature(Window.FEATURE_NO_TITLE);
 
-        setContentView(com.mobile.mozart.mozart_android.R.layout.splash_screen);
+        setContentView(R.layout.splash_screen);
 
         TimerTask task = new TimerTask() {
             @Override
