@@ -1,4 +1,4 @@
-package com.mobile.mozart.mozart_mobile_app;
+package com.mozart.mobile;
 
 import android.os.Bundle;
 import android.app.Activity;
@@ -9,6 +9,6 @@ public class carga_obras extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.carga_obras);
+        setContentView(com.mobile.mozart.mozart_android.R.layout.carga_obras);
     }
 }

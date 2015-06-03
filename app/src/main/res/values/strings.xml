@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Mozart-Mobile-App</string>
+    <string name="app_name">MozArt</string>
     <string name="action_settings">Settings</string>
     <!---icon fonts-->
     <string name="icon_pencil">&#xf040;</string>
@@ -9,9 +9,9 @@
     <string name="icon_google_plus">&#xf0d5;</string>
     <string name="icon_facebook">&#xf09a;</string>
     <string name="icon_twitter">&#xf099;</string>
+    <string name="icon_enter">&#xea13;</string>
     <string name="icon_sign_in">&#xf090;</string>
     <string name="icon_plus">&#xf067;</string>
     <string name="icon_question">&#xf128;</string>
     <string name="icon_envelope">&#xf0e0;</string>
-
 </resources>
