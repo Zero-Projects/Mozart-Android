@@ -105,22 +105,12 @@
                 android:layout_height="match_parent"
                 android:layout_marginTop="10dp">
 
-                <!--<TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:id="@+id/iconProblemas"
-                    android:text="@string/icon_question"
-                    android:textSize="20sp"
-                    android:textColor="@color/icons"
-                    android:paddingRight="5dp"
-                    android:layout_weight="1" />
-                -->
                 <Button
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Entrar"
                     android:id="@+id/buttonEntrar"
-                    android:background="@color/primary"
+                    android:background="@drawable/flat_selector"
                     android:layout_margin="5dp"
                     android:textColor="@color/background" />
 
@@ -129,23 +119,9 @@
                     android:layout_height="wrap_content"
                     android:text="¿Olvidaste tu contraseña?"
                     android:id="@+id/buttonOlvidaste"
-                    android:background="@color/primary"
                     android:layout_margin="5dp"
+                    android:background="@drawable/flat_selector"
                     android:textColor="@color/background" />
-
-                <!--<TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:id="@+id/iconEntrar"
-                    android:textColor="@color/icons"
-                    android:textSize="24sp"
-                    android:text="@string/icon_enter"
-                    android:paddingLeft="15dp"
-                    android:layout_weight="5"
-                    android:layout_gravity="right"
-                    android:gravity="center_vertical|right"
-                    android:textIsSelectable="false" />
-                -->
             </LinearLayout>
 
         </LinearLayout>
