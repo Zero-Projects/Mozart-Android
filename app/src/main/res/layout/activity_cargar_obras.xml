@@ -18,7 +18,7 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/icons"
+        android:background="@color/foreground"
         android:layout_marginLeft="25dp"
         android:layout_marginRight="25dp"
         android:padding="10dp">
@@ -122,7 +122,7 @@
                 android:text="Subir obra"
                 android:id="@+id/buttonSubirObra"
                 android:background="@color/primary"
-                android:textColor="@color/icons"/>
+                android:textColor="@color/background"/>
 
         </LinearLayout>
 

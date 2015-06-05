@@ -11,12 +11,11 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 public class MainActivity extends ActionBarActivity {
-    TextView iconEntrar,txtCuentaVinculada,textViewRegistrate,textViewProblemas,iconFacebook,
-            iconTwitter,iconGooglePlus,iconEmail,iconPassword,iconRegistrate,iconProblemas;
+    TextView txtCuentaVinculada,textViewRegistrate,textViewProblemas,iconFacebook,
+            iconTwitter,iconGooglePlus,iconEmail,iconPassword,iconRegistrate;
     EditText editTextEmail, editTextPassword;
     Typeface RobotoThin,RobotoRegular,RobotoMedium,RobotoLight,iconFonts,enterFont;
     ImageButton buttonProblemas, buttonEntrar;
-    ImageView logoZero;
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
@@ -45,24 +44,15 @@ public class MainActivity extends ActionBarActivity {
     }
 
     public void cargarFuentes(){
-//        iconEntrar = (TextView) findViewById(R.id.iconEntrar);
         txtCuentaVinculada = (TextView)findViewById(R.id.txtCuentaVinculada);
         textViewRegistrate = (TextView)findViewById(R.id.txtRegistrate);
-        textViewProblemas = (TextView)findViewById(R.id.txtProblemas);
-
         iconFacebook = (TextView) findViewById(R.id.iconFacebook);
         iconTwitter = (TextView) findViewById(R.id.iconTwitter);
         iconGooglePlus = (TextView) findViewById(R.id.iconGooglePlus);
         iconEmail = (TextView) findViewById(R.id.iconEmail);
         iconPassword = (TextView) findViewById(R.id.iconPassword);
-        iconRegistrate = (TextView) findViewById(R.id.iconRegistrate);
-//        iconProblemas = (TextView) findViewById(R.id.iconProblemas);
-
         editTextEmail = (EditText)findViewById(R.id.txtEmail);
         editTextPassword = (EditText)findViewById(R.id.txtPassword);
-
-        buttonProblemas = (ImageButton) findViewById(R.id.imageButtonProblemas);
-        buttonEntrar = (ImageButton) findViewById(R.id.imageButtonEntrar);
 
         //Carga las fuentes
 //        RobotoThin = Typeface.createFromAsset(this.getAssets(),"Roboto-Thin.ttf");
@@ -80,22 +70,12 @@ public class MainActivity extends ActionBarActivity {
         editTextEmail.setTypeface(RobotoLight);
         editTextPassword.setTypeface(RobotoLight);
         textViewRegistrate.setTypeface(RobotoLight);
-        textViewProblemas.setTypeface(RobotoLight);
 
         //Asigna los iconfonts
         iconFacebook.setTypeface(iconFonts);
         iconTwitter.setTypeface(iconFonts);
         iconGooglePlus.setTypeface(iconFonts);
-//        iconEntrar.setTypeface(enterFont);
         iconEmail.setTypeface(iconFonts);
         iconPassword.setTypeface(iconFonts);
-        iconRegistrate.setTypeface(iconFonts);
-//        iconProblemas.setTypeface(iconFonts);
-
-
-//        //Asigna el logo a imgZero
-//        logoZero = (ImageView) findViewById(R.id.imgZero);
-//        logoZero.setImageResource(R.drawable.zero_logo_white);
-//        logoZero.setScaleY(1);
     }
 }

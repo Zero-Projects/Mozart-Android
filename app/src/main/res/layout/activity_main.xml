@@ -3,8 +3,11 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center_vertical|center_horizontal"
-    android:background="@color/primary"
-    android:padding="15dp">
+    android:background="@color/background"
+    android:paddingTop="15dp"
+    android:paddingBottom="15dp"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp">
 
     <LinearLayout
         android:orientation="horizontal"
@@ -16,7 +19,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/imgZero"
-            android:src="@drawable/zero_logo_white"
+            android:src="@drawable/logo"
             android:scaleType="fitXY"
             android:adjustViewBounds="true"/>
     </LinearLayout>
@@ -31,9 +34,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
-            android:gravity="center_vertical|center_horizontal"
-            android:paddingLeft="30dp"
-            android:paddingRight="30dp">
+            android:gravity="center_vertical|center_horizontal">
 
             <LinearLayout
                 android:orientation="horizontal"
@@ -50,8 +51,7 @@
                     android:text="@string/icon_envelope"
                     android:gravity="center_vertical|center_horizontal"
                     android:singleLine="false"
-                    android:layout_marginTop="10dp"
-                    android:background="@color/background" />
+                    android:layout_marginTop="10dp" />
 
                 <EditText
                     android:layout_width="wrap_content"
@@ -61,11 +61,10 @@
                     android:singleLine="false"
                     android:textColorHint="@color/secondary_text"
                     android:padding="5dp"
-                    android:textColor="@color/primary"
+                    android:textColor="@color/primary_text"
                     android:textSize="16sp"
                     android:layout_weight="9"
                     android:inputType="textEmailAddress"
-                    android:background="@color/background"
                     android:layout_marginTop="10dp" />
             </LinearLayout>
 
@@ -83,8 +82,7 @@
                     android:padding="5dp"
                     android:text="@string/icon_lock"
                     android:gravity="center_vertical|center_horizontal"
-                    android:layout_marginTop="10dp"
-                    android:background="@color/background" />
+                    android:layout_marginTop="10dp" />
 
                 <EditText
                     android:layout_width="wrap_content"
@@ -95,28 +93,17 @@
                     android:textColorHint="@color/secondary_text"
                     android:layout_marginTop="10dp"
                     android:hint="Contraseña"
-                    android:textColor="@color/primary"
+                    android:textColor="@color/primary_text"
                     android:textSize="16sp"
                     android:inputType="textPassword"
-                    android:background="@color/background"
                     android:padding="5dp" />
             </LinearLayout>
 
             <LinearLayout
-                android:orientation="horizontal"
+                android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginTop="10dp">
-
-                <ImageButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"                    android:textSize="24sp"
-                    android:text="@string/icon_question"
-                    android:background="@color/primary"
-                    android:scaleType="fitXY"
-                    android:adjustViewBounds="true"
-                    android:gravity="center_vertical|right"
-                    android:id="@+id/imageButtonProblemas" />
 
                 <!--<TextView
                     android:layout_width="wrap_content"
@@ -128,15 +115,23 @@
                     android:paddingRight="5dp"
                     android:layout_weight="1" />
                 -->
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Entrar"
+                    android:id="@+id/buttonEntrar"
+                    android:background="@color/primary"
+                    android:layout_margin="5dp"
+                    android:textColor="@color/background" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:text="¿Olvidaste tu contraseña?"
-                    android:id="@+id/txtProblemas"
-                    android:textColor="@color/background"
-                    android:textSize="14sp"
-                    android:gravity="center_vertical"
-                    android:layout_weight="10" />
+                    android:id="@+id/buttonOlvidaste"
+                    android:background="@color/primary"
+                    android:layout_margin="5dp"
+                    android:textColor="@color/background" />
 
                 <!--<TextView
                     android:layout_width="wrap_content"
@@ -151,14 +146,6 @@
                     android:gravity="center_vertical|right"
                     android:textIsSelectable="false" />
                 -->
-                <ImageButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"                    android:textSize="24sp"
-                    android:text="@string/icon_enter"
-                    android:scaleType="fitXY"
-                    android:adjustViewBounds="true"
-                    android:gravity="center_vertical|right"
-                    android:id="@+id/imageButtonEntrar" />
             </LinearLayout>
 
         </LinearLayout>
@@ -175,7 +162,7 @@
                 android:text="O con una cuenta ya vinculada"
                 android:id="@+id/txtCuentaVinculada"
                 android:gravity="center_vertical|center_horizontal"
-                android:textColor="@color/background"
+                android:textColor="@color/primary_text"
                 android:paddingTop="10dp"
                 android:paddingBottom="10dp"
                 android:textSize="16sp" />
@@ -199,7 +186,7 @@
                 android:textSize="30dp"
                 android:layout_marginLeft="25dp"
                 android:layout_marginRight="25dp"
-                android:textColor="@color/icons" />
+                android:textColor="@color/primary" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -210,7 +197,7 @@
                 android:textSize="30dp"
                 android:layout_marginLeft="25dp"
                 android:layout_marginRight="25dp"
-                android:textColor="@color/icons" />
+                android:textColor="@color/primary" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -221,7 +208,7 @@
                 android:textSize="30dp"
                 android:layout_marginLeft="25dp"
                 android:layout_marginRight="25dp"
-                android:textColor="@color/icons" />
+                android:textColor="@color/primary" />
         </LinearLayout>
 
         <LinearLayout
@@ -240,17 +227,9 @@
                 android:text="Registrate"
                 android:id="@+id/txtRegistrate"
                 android:textSize="14sp"
-                android:textColor="@color/background"
+                android:textColor="@color/primary_text"
                 android:gravity="center_vertical|center_horizontal" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/iconRegistrate"
-                android:text="@string/icon_pencil"
-                android:textColor="@color/icons"
-                android:textSize="16sp"
-                android:paddingLeft="10dp" />
         </LinearLayout>
 
     </LinearLayout>
