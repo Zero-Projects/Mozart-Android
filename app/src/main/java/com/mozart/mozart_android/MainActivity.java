@@ -70,7 +70,7 @@ public class MainActivity extends ActionBarActivity {
         buttonEntra.setTypeface(RobotoRegular);
     }
     public void onClickEntrar(View view){
-        Intent intent = new Intent(this, CargarObras.class);
+        Intent intent = new Intent(this, ExplorarObras.class);
         startActivity(intent);
     }
     public void onClickProblemas(View view){
