@@ -19,9 +19,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/imgZero"
-            android:src="@drawable/logo"
+            android:src="@drawable/mozart_primary_sn"
             android:scaleType="fitXY"
-            android:adjustViewBounds="true"/>
+            android:adjustViewBounds="true"
+            android:contentDescription="Logo MozArt" />
     </LinearLayout>
 
     <LinearLayout
@@ -41,17 +42,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:id="@+id/iconEmail"
-                    android:textSize="16sp"
-                    android:textColor="@color/primary"
-                    android:padding="5dp"
-                    android:text="@string/icon_envelope"
-                    android:gravity="center_vertical|center_horizontal"
-                    android:singleLine="false"
-                    android:layout_marginTop="10dp" />
+                <ImageButton
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:id="@+id/buttonEmail"
+                    android:background="@drawable/primary_mail"
+                    android:scaleType="fitXY"
+                    android:layout_gravity="center"
+                    android:adjustViewBounds="true" />
 
                 <EditText
                     android:layout_width="wrap_content"
@@ -64,8 +62,7 @@
                     android:textColor="@color/primary_text"
                     android:textSize="16sp"
                     android:layout_weight="9"
-                    android:inputType="textEmailAddress"
-                    android:layout_marginTop="10dp" />
+                    android:inputType="textEmailAddress" />
             </LinearLayout>
 
             <LinearLayout
@@ -73,16 +70,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:id="@+id/iconPassword"
-                    android:textSize="16sp"
-                    android:textColor="@color/primary"
-                    android:padding="5dp"
-                    android:text="@string/icon_lock"
-                    android:gravity="center_vertical|center_horizontal"
-                    android:layout_marginTop="10dp" />
+                <ImageButton
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:id="@+id/buttonPassword"
+                    android:adjustViewBounds="true"
+                    android:background="@drawable/primary_lock"
+                    android:layout_gravity="center" />
 
                 <EditText
                     android:layout_width="wrap_content"
@@ -91,7 +85,6 @@
                     android:layout_weight="9"
                     android:singleLine="false"
                     android:textColorHint="@color/secondary_text"
-                    android:layout_marginTop="10dp"
                     android:hint="Contraseña"
                     android:textColor="@color/primary_text"
                     android:textSize="16sp"
@@ -112,13 +105,14 @@
                     android:id="@+id/buttonEntrar"
                     android:background="@drawable/flat_selector"
                     android:layout_margin="5dp"
-                    android:textColor="@color/background" />
+                    android:textColor="@color/background"
+                    android:onClick="onClickEntrar" />
 
                 <Button
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="¿Olvidaste tu contraseña?"
-                    android:id="@+id/buttonOlvidaste"
+                    android:id="@+id/buttonProblemas"
                     android:layout_margin="5dp"
                     android:background="@drawable/flat_selector"
                     android:textColor="@color/background" />
@@ -153,38 +147,36 @@
             android:gravity="center_vertical|center_horizontal"
             android:layout_marginBottom="10dp">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:id="@+id/iconFacebook"
-                android:gravity="center_vertical|center_horizontal"
-                android:text="@string/icon_facebook"
-                android:textSize="30dp"
-                android:layout_marginLeft="25dp"
-                android:layout_marginRight="25dp"
-                android:textColor="@color/primary" />
+            <Button
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:id="@+id/buttonFacebook"
+                android:background="@drawable/primary_facebook"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:singleLine="true" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:id="@+id/iconTwitter"
-                android:gravity="center_vertical|center_horizontal"
-                android:text="@string/icon_twitter"
-                android:textSize="30dp"
-                android:layout_marginLeft="25dp"
-                android:layout_marginRight="25dp"
-                android:textColor="@color/primary" />
+            <Button
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:id="@+id/buttonTwitter"
+                android:adjustViewBounds="true"
+                android:background="@drawable/primary_twitter"
+                android:scaleType="fitXY"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:singleLine="true" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:id="@+id/iconGooglePlus"
-                android:gravity="center_vertical|center_horizontal"
-                android:text="@string/icon_google_plus"
-                android:textSize="30dp"
-                android:layout_marginLeft="25dp"
-                android:layout_marginRight="25dp"
-                android:textColor="@color/primary" />
+            <Button
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:scaleType="fitXY"
+                android:id="@+id/buttonGoogle"
+                android:background="@drawable/primary_google"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:adjustViewBounds="true"
+                android:singleLine="true" />
         </LinearLayout>
 
         <LinearLayout

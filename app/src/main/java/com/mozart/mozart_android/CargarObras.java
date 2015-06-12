@@ -11,7 +11,7 @@ import android.widget.TextView;
 
 public class CargarObras extends ActionBarActivity {
     Toolbar toolbar;
-    TextView textViewCrearObra,textViewTitulo,textViewDescripcion,textViewCategoria;
+    TextView textViewTitulo,textViewDescripcion,textViewCategoria;
     EditText editTextTitulo,editTextDescripcion,editTextCategoria;
     Typeface RobotoThin,RobotoRegular,RobotoMedium,RobotoLight,iconFonts,enterFont;
     Button buttonSubirObra;
@@ -24,6 +24,7 @@ public class CargarObras extends ActionBarActivity {
         toolbar = (Toolbar) findViewById(R.id.tool_bar);
         setSupportActionBar(toolbar);
 
+        toolbar.setTitle("Cargar Obras");
         cargarFuentes();
     }
 
@@ -47,7 +48,6 @@ public class CargarObras extends ActionBarActivity {
     }
 
     public void cargarFuentes(){
-        textViewCrearObra = (TextView) findViewById(R.id.TextViewCrearObra);
         textViewTitulo = (TextView) findViewById(R.id.TextViewTitulo);
         textViewDescripcion = (TextView) findViewById(R.id.TextViewDescripcion);
         textViewCategoria = (TextView) findViewById(R.id.TextViewCategoria);
@@ -60,15 +60,14 @@ public class CargarObras extends ActionBarActivity {
 
         RobotoLight = Typeface.createFromAsset(this.getAssets(),"Roboto-Light.ttf");
         RobotoRegular = Typeface.createFromAsset(this.getAssets(),"Roboto-Regular.ttf");
+        RobotoMedium = Typeface.createFromAsset(this.getAssets(),"Roboto-Medium.ttf");
 
-        textViewCrearObra.setTypeface(RobotoRegular);
         textViewTitulo.setTypeface(RobotoRegular);
         textViewDescripcion.setTypeface(RobotoRegular);
         textViewCategoria.setTypeface(RobotoRegular);
-        editTextTitulo.setTypeface(RobotoLight);
-        editTextDescripcion.setTypeface(RobotoLight);
-        editTextCategoria.setTypeface(RobotoLight);
-        editTextCategoria.setTypeface(RobotoLight);
-        buttonSubirObra.setTypeface(RobotoLight);
+        editTextTitulo.setTypeface(RobotoMedium);
+        editTextDescripcion.setTypeface(RobotoMedium);
+        editTextCategoria.setTypeface(RobotoMedium);
+        buttonSubirObra.setTypeface(RobotoRegular);
     }
 }
