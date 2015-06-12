@@ -28,5 +28,9 @@
             android:name=".CargarObras"
             android:label="@string/cargar_obra_act" >
         </activity>
+        <activity
+            android:name=".GestorPages"
+            android:label="Gestor">
+            </activity>
     </application>
 </manifest>
