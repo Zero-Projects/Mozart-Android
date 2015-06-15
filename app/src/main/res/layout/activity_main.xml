@@ -4,10 +4,7 @@
     android:layout_height="match_parent"
     android:gravity="center_vertical|center_horizontal"
     android:background="@color/background"
-    android:paddingTop="15dp"
-    android:paddingBottom="15dp"
-    android:paddingLeft="15dp"
-    android:paddingRight="15dp">
+    android:padding="15dp">
 
     <LinearLayout
         android:orientation="horizontal"
