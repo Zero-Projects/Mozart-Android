@@ -16,8 +16,8 @@ public class GestorPages extends ActionBarActivity {
     ViewPager pager;
     ViewPagerAdapter adapter;
     SlidingTabLayout tabs;
-    CharSequence Titles[]={"Explorar Obras","Cargar Obras"};
-    int Numboftabs =2;
+    CharSequence Titles[]={"Explorar Obras","Cargar Obras","Cargar Imagen"};
+    int Numboftabs =3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

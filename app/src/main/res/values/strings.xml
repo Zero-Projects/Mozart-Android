@@ -3,6 +3,7 @@
     <string name="cargar_obra_act">MozArt</string>
     <string name="explorar_obras_act">MozArt</string>
     <string name="action_settings">Settings</string>
+    <string name="categorias">Selecciona una categoria</string>
     <!---icon fonts-->
     <string name="icon_pencil">&#xf040;</string>
     <string name="icon_lock">&#xf023;</string>

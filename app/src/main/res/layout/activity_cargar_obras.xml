@@ -88,16 +88,13 @@
                     android:textSize="18sp"
                     android:textColor="@color/primary_text"
                     android:textColorHint="@color/secondary_text"/>
-
-                <EditText
+                <Spinner
+                    android:id="@+id/spinnerCategoria"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/EditTextCategoria"
-                    android:textColorHint="@color/secondary_text"
-                    android:padding="10dp"
-                    android:textColor="@color/primary_text"
-                    android:textSize="16sp"
-                    android:hint="Selecciona la categoría"/>
+                    android:drawSelectorOnTop="true"
+                    android:prompt="@string/categorias"/>
+
             </LinearLayout>
 
             <LinearLayout
