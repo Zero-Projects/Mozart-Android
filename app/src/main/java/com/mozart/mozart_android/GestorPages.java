@@ -16,13 +16,13 @@ public class GestorPages extends ActionBarActivity {
     ViewPager pager;
     ViewPagerAdapter adapter;
     SlidingTabLayout tabs;
-    CharSequence Titles[]={"Explorar Obras","Cargar Obras","Cargar Imagen"};
-    int Numboftabs =3;
+    CharSequence Titles[]={"Explorar Obras","Cargar Obras"};
+    int Numboftabs =2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_gestor);
+        setContentView(R.layout.gestor);
 
 
         // Creating The Toolbar and setting it as the Toolbar for the activity

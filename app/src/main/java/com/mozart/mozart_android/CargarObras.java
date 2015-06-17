@@ -1,30 +1,43 @@
 package com.mozart.mozart_android;
 
-import android.content.Context;
+import android.app.Activity;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.database.Cursor;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Typeface;
+import android.net.Uri;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AlertDialog;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.View.*;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.AdapterView.OnItemSelectedListener;
 
 public class CargarObras extends Fragment {
-    TextView textViewTitulo, textViewDescripcion, textViewCategoria;
-    EditText editTextTitulo, editTextDescripcion;
-    Typeface RobotoThin, RobotoRegular, RobotoMedium, RobotoLight, iconFonts, enterFont;
-    Button buttonSubirObra;
+    AlertDialog levelDialog;
+    Bitmap bitmapImage;
+    Button buttonSubirObra,buttonSeleccionarArchivo;
+    EditText editTextTitulo, editTextDescripcion,editTextPath;
+    ImageView imageViewObra;
     Spinner spinnerCategorias;
-    View view;
     String categoria;
+    TextView textViewTitulo, textViewDescripcion, textViewCategoria;
+    Typeface RobotoThin, RobotoRegular, RobotoMedium, RobotoLight, iconFonts, enterFont;
+    View view;
 
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -32,7 +45,42 @@ public class CargarObras extends Fragment {
         cargarFuentes();
         //Carga elementos del spinner
         setSpinnerContent(view);
+
+        eventosBotones();
+
+
         return view;
+    }
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        switch (requestCode) {
+            case 1:
+            {
+                if (resultCode == Activity.RESULT_OK)
+                {
+                    Uri photoUri = data.getData();
+                    if (photoUri != null)
+                    {
+                        try {
+                            String[] filePathColumn = {MediaStore.Images.Media.DATA};
+
+                            Cursor cursor = getActivity().getContentResolver().query(photoUri, filePathColumn, null, null, null);
+                            cursor.moveToFirst();
+                            int columnIndex = cursor.getColumnIndex(filePathColumn[0]);
+                            String filePath = cursor.getString(columnIndex);
+                            cursor.close();
+                            bitmapImage = BitmapFactory.decodeFile(filePath);
+                            ImageView img = (ImageView) view.findViewById(R.id.imageViewObra);
+                            img.setImageBitmap(bitmapImage);
+                            img.setVisibility(View.VISIBLE);
+                            editTextPath.setText(filePath);
+                        }catch(Exception e)
+                        {}
+                    }
+                }// resultCode
+            }// case 1
+        }// switch, request code
     }
 
     public void cargarFuentes() {
@@ -42,8 +90,10 @@ public class CargarObras extends Fragment {
 
         editTextTitulo = (EditText) view.findViewById(R.id.EditTextTitulo);
         editTextDescripcion = (EditText) view.findViewById(R.id.EditTextDescripcion);
+        editTextPath = (EditText) view.findViewById(R.id.EditTextPath);
 
         buttonSubirObra = (Button) view.findViewById(R.id.buttonSubirObra);
+        buttonSeleccionarArchivo = (Button) view.findViewById(R.id.buttonSeleccionarArchivo);
 
         RobotoLight = Typeface.createFromAsset(getActivity().getAssets(), "Roboto-Light.ttf");
         RobotoRegular = Typeface.createFromAsset(getActivity().getAssets(), "Roboto-Regular.ttf");
@@ -55,6 +105,8 @@ public class CargarObras extends Fragment {
         editTextTitulo.setTypeface(RobotoMedium);
         editTextDescripcion.setTypeface(RobotoMedium);
         buttonSubirObra.setTypeface(RobotoRegular);
+        buttonSeleccionarArchivo.setTypeface(RobotoRegular);
+
     }
     private void setSpinnerContent(View view){
         spinnerCategorias = (Spinner) view.findViewById(R.id.spinnerCategoria);
@@ -64,10 +116,8 @@ public class CargarObras extends Fragment {
         spinnerCategorias.setOnItemSelectedListener(new OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parentView, View selectedItemView,
-                                       int position, long id){
+                                       int position, long id) {
                 categoria = parentView.getItemAtPosition(position).toString();
-                Toast.makeText(parentView.getContext(), "Has seleccinado " +
-                        parentView.getItemAtPosition(position).toString(),Toast.LENGTH_LONG).show();
             }
 
             @Override
@@ -77,5 +127,31 @@ public class CargarObras extends Fragment {
         });
     }
 
+    public void eventosBotones() {
+        buttonSeleccionarArchivo.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                final CharSequence[] items = {"Imágenes", " Música"};
+                AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+                builder.setTitle("Selecciona el tipo de archivo");
+                builder.setSingleChoiceItems(items, -1, new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int item) {
+                        switch (item) {
+                            case 0://Imágenes
+                                Intent photoPickerIntent = new Intent(Intent.ACTION_PICK);
+                                photoPickerIntent.setType("image/*");
+                                startActivityForResult(photoPickerIntent, 1);
+                                break;
+                            case 1://Música
 
+                                break;
+                        }
+                        levelDialog.dismiss();
+                    }
+                });
+                levelDialog = builder.create();
+                levelDialog.show();
+            }
+        });
+    }
 }

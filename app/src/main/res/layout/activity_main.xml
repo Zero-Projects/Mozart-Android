@@ -40,8 +40,8 @@
                 android:layout_height="wrap_content">
 
                 <ImageButton
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
                     android:id="@+id/buttonEmail"
                     android:background="@drawable/primary_mail"
                     android:scaleType="fitXY"
@@ -55,9 +55,9 @@
                     android:hint="Email"
                     android:singleLine="false"
                     android:textColorHint="@color/secondary_text"
-                    android:padding="5dp"
+                    android:padding="10dp"
                     android:textColor="@color/primary_text"
-                    android:textSize="16sp"
+                    android:textSize="18sp"
                     android:layout_weight="9"
                     android:inputType="textEmailAddress" />
             </LinearLayout>
@@ -68,8 +68,8 @@
                 android:layout_height="wrap_content">
 
                 <ImageButton
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
                     android:id="@+id/buttonPassword"
                     android:adjustViewBounds="true"
                     android:background="@drawable/primary_lock"
@@ -84,9 +84,9 @@
                     android:textColorHint="@color/secondary_text"
                     android:hint="Contraseña"
                     android:textColor="@color/primary_text"
-                    android:textSize="16sp"
+                    android:textSize="18sp"
                     android:inputType="textPassword"
-                    android:padding="5dp" />
+                    android:padding="10dp" />
             </LinearLayout>
 
             <LinearLayout
@@ -100,10 +100,21 @@
                     android:layout_height="wrap_content"
                     android:text="Entrar"
                     android:id="@+id/buttonEntrar"
-                    android:background="@drawable/flat_selector"
+                    android:background="@drawable/raised_selector"
                     android:layout_margin="5dp"
                     android:textColor="@color/background"
-                    android:onClick="onClickEntrar" />
+                    android:onClick="onClickEntrar"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Entrar sin cuenta"
+                    android:background="@drawable/flat_selector"
+                    android:id="@+id/buttonExplorar"
+                    android:layout_margin="5dp"
+                    android:textColor="@color/primary"
+                    android:textSize="16sp" />
 
                 <Button
                     android:layout_width="match_parent"
@@ -112,7 +123,9 @@
                     android:id="@+id/buttonProblemas"
                     android:layout_margin="5dp"
                     android:background="@drawable/flat_selector"
-                    android:textColor="@color/background" />
+                    android:textColor="@color/background"
+                    android:enabled="false"
+                    android:visibility="gone" />
             </LinearLayout>
 
         </LinearLayout>
@@ -132,7 +145,7 @@
                 android:textColor="@color/primary_text"
                 android:paddingTop="10dp"
                 android:paddingBottom="10dp"
-                android:textSize="16sp" />
+                android:textSize="18sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -145,8 +158,8 @@
             android:layout_marginBottom="10dp">
 
             <Button
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
                 android:id="@+id/buttonFacebook"
                 android:background="@drawable/primary_facebook"
                 android:layout_marginLeft="15dp"
@@ -154,8 +167,8 @@
                 android:singleLine="true" />
 
             <Button
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
                 android:id="@+id/buttonTwitter"
                 android:adjustViewBounds="true"
                 android:background="@drawable/primary_twitter"
@@ -165,8 +178,8 @@
                 android:singleLine="true" />
 
             <Button
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
                 android:scaleType="fitXY"
                 android:id="@+id/buttonGoogle"
                 android:background="@drawable/primary_google"
@@ -181,19 +194,18 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:gravity="center_vertical|right"
-            android:paddingLeft="30dp"
-            android:paddingRight="30dp"
-            android:paddingBottom="5dp">
+            android:gravity="center_vertical|right">
 
-            <TextView
-                android:layout_width="wrap_content"
+            <Button
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Registrate"
-                android:id="@+id/txtRegistrate"
-                android:textSize="14sp"
-                android:textColor="@color/primary_text"
-                android:gravity="center_vertical|center_horizontal" />
+                android:text="Regístrate aquí"
+                android:id="@+id/buttonRegistrarse"
+                android:background="@drawable/flat_selector"
+                android:layout_margin="5dp"
+                android:textColor="@color/primary"
+                android:onClick="onClickEntrar"
+                android:textSize="16sp" />
 
         </LinearLayout>
 

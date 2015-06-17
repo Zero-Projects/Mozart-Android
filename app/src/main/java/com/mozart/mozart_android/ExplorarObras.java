@@ -28,4 +28,5 @@ public class ExplorarObras extends Fragment {
         RobotoMedium = Typeface.createFromAsset(getActivity().getAssets(),"Roboto-Medium.ttf");
 
     }
+
 }

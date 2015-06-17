@@ -4,7 +4,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background"
-    tools:context=".carga_obras"
     android:orientation="vertical">
 
     <ScrollView
@@ -22,96 +21,105 @@
             android:padding="10dp">
 
 
-            <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceSmall"
-                    android:text="Título"
-                    android:id="@+id/TextViewTitulo"
-                    android:textSize="18sp"
-                    android:textColor="@color/primary_text"/>
-
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/EditTextTitulo"
-                    android:textColor="@color/primary_text"
-                    android:textColorHint="@color/secondary_text"
-                    android:padding="10dp"
-                    android:textSize="16sp"/>
-            </LinearLayout>
-
-            <LinearLayout
-                android:orientation="vertical"
+            <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="15dp">
+                android:text="Seleccionar archivo"
+                android:id="@+id/buttonSeleccionarArchivo"
+                android:background="@drawable/flat_selector"
+                android:textColor="@color/primary"
+                android:textSize="16sp"
+                android:drawableRight="@drawable/primary_ic_search"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Descripción de la obra"
-                    android:id="@+id/TextViewDescripcion"
-                    android:textSize="18sp"
-                    android:textColor="@color/primary_text"
-                    android:textColorHint="@color/secondary_text"/>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:id="@+id/imageViewObra"
+                android:adjustViewBounds="true"
+                android:visibility="gone"
+                android:layout_marginTop="15dp" />
 
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/EditTextDescripcion"
-                    android:inputType="textMultiLine"
-                    android:layout_gravity="top"
-                    android:padding="10dp"
-                    android:textColor="@color/primary_text"
-                    android:textColorHint="@color/secondary_text"
-                    android:textSize="16sp" />
-            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Título"
+                android:id="@+id/TextViewTitulo"
+                android:textSize="18sp"
+                android:layout_marginTop="15dp" />
 
-            <LinearLayout
-                android:orientation="vertical"
+            <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="15dp">
+                android:id="@+id/EditTextTitulo"
+                android:textColor="@color/primary_text"
+                android:textColorHint="@color/secondary_text"
+                android:padding="10dp"
+                android:textSize="16sp"/>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Categoría"
-                    android:id="@+id/TextViewCategoria"
-                    android:textSize="18sp"
-                    android:textColor="@color/primary_text"
-                    android:textColorHint="@color/secondary_text"/>
-                <Spinner
-                    android:id="@+id/spinnerCategoria"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:drawSelectorOnTop="true"
-                    android:prompt="@string/categorias"/>
 
-            </LinearLayout>
 
-            <LinearLayout
-                android:orientation="vertical"
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Descripción de la obra"
+                android:id="@+id/TextViewDescripcion"
+                android:textSize="18sp"
+                android:textColorHint="@color/secondary_text"
+                android:layout_marginTop="15dp" />
+
+            <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="15dp">
-                <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Subir obra"
-                    android:id="@+id/buttonSubirObra"
-                    android:background="@drawable/flat_selector"
-                    android:textColor="@color/background"/>
+                android:id="@+id/EditTextDescripcion"
+                android:inputType="textMultiLine"
+                android:padding="10dp"
+                android:textColor="@color/primary_text"
+                android:textColorHint="@color/secondary_text"
+                android:textSize="16sp"
+                android:layout_marginTop="10dp"
+                android:text="assssssssassssssssassssssssassssssssasdasdasdas  asdasdasdas" />
 
-            </LinearLayout>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/EditTextPath"
+                android:padding="10dp"
+                android:layout_marginTop="15dp"
+                android:textSize="16sp"
+                android:hint="/storage/"
+                android:textColor="@color/primary_text"
+                android:textColorHint="@color/secondary_text" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Categoría"
+                android:id="@+id/TextViewCategoria"
+                android:textSize="18sp"
+                android:textColor="@color/secondary_text"
+                android:textColorHint="@color/secondary_text"
+                android:layout_marginTop="15dp" />
+
+            <Spinner
+                android:id="@+id/spinnerCategoria"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawSelectorOnTop="true"
+                android:prompt="@string/categorias"
+                android:padding="10dp" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Subir obra"
+                android:id="@+id/buttonSubirObra"
+                android:background="@drawable/raised_selector"
+                android:textColor="@color/background"
+                android:layout_marginTop="15dp" />
 
         </LinearLayout>
     </ScrollView>

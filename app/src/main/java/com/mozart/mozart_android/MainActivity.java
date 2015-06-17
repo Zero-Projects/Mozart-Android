@@ -14,7 +14,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 public class MainActivity extends ActionBarActivity {
-    TextView txtCuentaVinculada,textViewRegistrate;
+    TextView txtCuentaVinculada;
     EditText editTextEmail, editTextPassword;
     Typeface RobotoThin,RobotoRegular,RobotoMedium,RobotoLight,iconFonts,enterFont;
     Button buttonProblemas,buttonEntra;
@@ -48,7 +48,6 @@ public class MainActivity extends ActionBarActivity {
 
     public void asignarFuentes(){
         txtCuentaVinculada = (TextView)findViewById(R.id.txtCuentaVinculada);
-        textViewRegistrate = (TextView)findViewById(R.id.txtRegistrate);
         editTextEmail = (EditText)findViewById(R.id.txtEmail);
         editTextPassword = (EditText)findViewById(R.id.txtPassword);
         buttonEntra = (Button)findViewById(R.id.buttonEntrar);
@@ -64,7 +63,6 @@ public class MainActivity extends ActionBarActivity {
         //Asigna los estilos de fuentes
         editTextEmail.setTypeface(RobotoMedium);
         editTextPassword.setTypeface(RobotoMedium);
-        textViewRegistrate.setTypeface(RobotoRegular);
         txtCuentaVinculada.setTypeface(RobotoRegular);
         buttonProblemas.setTypeface(RobotoRegular);
         buttonEntra.setTypeface(RobotoRegular);
