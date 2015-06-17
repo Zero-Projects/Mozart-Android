@@ -103,8 +103,8 @@
                     android:background="@drawable/raised_selector"
                     android:layout_margin="5dp"
                     android:textColor="@color/background"
-                    android:onClick="onClickEntrar"
-                    android:textSize="16sp" />
+                    android:textSize="16sp"
+                    android:onClick="onClickEntrar" />
 
                 <Button
                     android:layout_width="match_parent"
@@ -114,6 +114,7 @@
                     android:id="@+id/buttonExplorar"
                     android:layout_margin="5dp"
                     android:textColor="@color/primary"
+                    android:onClick="onClickEntrarPublico"
                     android:textSize="16sp" />
 
                 <Button
@@ -123,8 +124,7 @@
                     android:id="@+id/buttonProblemas"
                     android:layout_margin="5dp"
                     android:background="@drawable/flat_selector"
-                    android:textColor="@color/background"
-                    android:enabled="false"
+                    android:textColor="@color/primary"
                     android:visibility="gone" />
             </LinearLayout>
 

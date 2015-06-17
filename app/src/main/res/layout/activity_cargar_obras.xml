@@ -37,7 +37,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="160dp"
                 android:id="@+id/imageViewObra"
-                android:adjustViewBounds="true"
                 android:visibility="gone"
                 android:layout_marginTop="15dp" />
 
@@ -80,8 +79,7 @@
                 android:textColor="@color/primary_text"
                 android:textColorHint="@color/secondary_text"
                 android:textSize="16sp"
-                android:layout_marginTop="10dp"
-                android:text="assssssssassssssssassssssssassssssssasdasdasdas  asdasdasdas" />
+                android:layout_marginTop="10dp"/>
 
             <EditText
                 android:layout_width="match_parent"
@@ -91,8 +89,9 @@
                 android:layout_marginTop="15dp"
                 android:textSize="16sp"
                 android:hint="/storage/"
-                android:textColor="@color/primary_text"
-                android:textColorHint="@color/secondary_text" />
+                android:textColor="@color/secondary_text"
+                android:textColorHint="@color/secondary_text"
+                android:editable="false" />
 
             <TextView
                 android:layout_width="wrap_content"

@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.mozart.mozart_android" >
-
+    <uses-permission android:name="android.permission.INTERNET" />
     <application
+        android:name=".AppController"
         android:allowBackup="true"
         android:icon="@mipmap/logo"
         android:label="@string/app_name"
@@ -21,16 +22,12 @@
             android:screenOrientation="portrait">
         </activity>
         <activity
-            android:name=".ExplorarObras"
-            android:label="@string/explorar_obras_act">
-        </activity>
-        <activity
-            android:name=".CargarObras"
-            android:label="@string/cargar_obra_act" >
-        </activity>
-        <activity
             android:name=".GestorPages"
-            android:label="Gestor">
-            </activity>
+            android:label="@string/app_name">
+        </activity>
+        <activity android:name=".PagesGestorPublic"
+            android:label="@string/app_name"/>
+
     </application>
+
 </manifest>

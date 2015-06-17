@@ -12,6 +12,7 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends ActionBarActivity {
     TextView txtCuentaVinculada;
@@ -19,6 +20,7 @@ public class MainActivity extends ActionBarActivity {
     Typeface RobotoThin,RobotoRegular,RobotoMedium,RobotoLight,iconFonts,enterFont;
     Button buttonProblemas,buttonEntra;
     ImageButton buttonEntrar,buttonEmail,buttonPassword,ButtonEmail,ButtonPassword;
+    String email=null, password=null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
@@ -68,10 +70,25 @@ public class MainActivity extends ActionBarActivity {
         buttonEntra.setTypeface(RobotoRegular);
     }
     public void onClickEntrar(View view){
-        Intent intent = new Intent(this, GestorPages.class);
-        startActivity(intent);
+        email = editTextEmail.getText().toString();
+        password = editTextPassword.getText().toString();
+        if(email.equals("mozart")  && password.equals("mozart")){
+            Intent intent = new Intent(this, GestorPages.class);
+            startActivity(intent);
+        }else{
+            Toast toast = Toast.makeText(getApplicationContext(),
+                            "Verifica tus datos", Toast.LENGTH_SHORT);
+
+            toast.show();
+            buttonProblemas.setVisibility(View.VISIBLE);
+        }
+
     }
     public void onClickProblemas(View view){
+    }
+    public void onClickEntrarPublico(View view){
+        Intent intent = new Intent(this, PagesGestorPublic.class);
+        startActivity(intent);
     }
     public void onClickEmail(View view){
         editTextEmail.setFocusable(true);

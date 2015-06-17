@@ -8,16 +8,16 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 
-public class GestorPages extends ActionBarActivity {
+public class PagesGestorPublic extends ActionBarActivity {
 
     // Declaring Your View and Variables
 
     Toolbar toolbar;
     ViewPager pager;
-    ViewPagerAdapterPublic adapter;
+    ViewPagerAdapter adapter;
     SlidingTabLayout tabs;
-    CharSequence Titles[]={"Explorar Obras","Cargar Obras"};
-    int Numboftabs =2;
+    CharSequence Titles[]={"Explorar Obras"};
+    int Numboftabs =1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,7 +32,7 @@ public class GestorPages extends ActionBarActivity {
 
 
         // Creating The ViewPagerAdapter and Passing Fragment Manager, Titles fot the Tabs and Number Of Tabs.
-        adapter =  new ViewPagerAdapterPublic(getSupportFragmentManager(),Titles,Numboftabs);
+        adapter =  new ViewPagerAdapter(getSupportFragmentManager(),Titles,Numboftabs);
 
         // Assigning ViewPager View and setting the adapter
         pager = (ViewPager) findViewById(R.id.pager);
