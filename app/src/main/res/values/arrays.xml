@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="categorias">
+        <item>Dibujo y Pintura</item>
+        <item>Fotografía y Filme</item>
+        <item>Teatro y Literatura</item>
+        <item>Música y Baile</item>
+        <item>Escultura y Cerámica</item>
+        <item>Arte Digital</item>
+        <item>Otros</item>
+    </string-array>
+</resources>

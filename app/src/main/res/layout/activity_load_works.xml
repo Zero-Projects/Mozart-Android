@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView2">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:elevation="2dp"
+            android:background="@color/foreground"
+            android:padding="10dp">
+
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Seleccionar archivo"
+                android:id="@+id/buttonSeleccionarArchivo"
+                android:background="@drawable/flat_selector"
+                android:textColor="@color/primary"
+                android:textSize="16sp"
+                android:drawableRight="@drawable/primary_ic_search"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:id="@+id/imageViewObra"
+                android:visibility="gone"
+                android:layout_marginTop="15dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Título"
+                android:id="@+id/TextViewTitulo"
+                android:textSize="18sp"
+                android:layout_marginTop="15dp" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/EditTextTitulo"
+                android:textColor="@color/primary_text"
+                android:textColorHint="@color/secondary_text"
+                android:padding="10dp"
+                android:textSize="16sp"/>
+
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Descripción de la obra"
+                android:id="@+id/TextViewDescripcion"
+                android:textSize="18sp"
+                android:textColorHint="@color/secondary_text"
+                android:layout_marginTop="15dp" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/EditTextDescripcion"
+                android:inputType="textMultiLine"
+                android:padding="10dp"
+                android:textColor="@color/primary_text"
+                android:textColorHint="@color/secondary_text"
+                android:textSize="16sp"
+                android:layout_marginTop="10dp"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/EditTextPath"
+                android:padding="10dp"
+                android:layout_marginTop="15dp"
+                android:textSize="16sp"
+                android:hint="/storage/"
+                android:textColor="@color/secondary_text"
+                android:textColorHint="@color/secondary_text"
+                android:editable="false" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Categoría"
+                android:id="@+id/TextViewCategoria"
+                android:textSize="18sp"
+                android:textColor="@color/secondary_text"
+                android:textColorHint="@color/secondary_text"
+                android:layout_marginTop="15dp" />
+
+            <Spinner
+                android:id="@+id/spinnerCategoria"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawSelectorOnTop="true"
+                android:prompt="@string/categorias"
+                android:padding="10dp" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Subir obra"
+                android:id="@+id/buttonSubirObra"
+                android:background="@drawable/raised_selector"
+                android:textColor="@color/background"
+                android:layout_marginTop="15dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
