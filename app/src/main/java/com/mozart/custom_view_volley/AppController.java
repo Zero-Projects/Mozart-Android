@@ -1,4 +1,5 @@
-package com.mozart.mozart_android;
+package com.mozart.custom_view_volley;
+//This class is a singleton class which initializes core objects of volley library.
 import android.app.Application;
 import android.text.TextUtils;
 

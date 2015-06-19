@@ -1,5 +1,7 @@
 package com.mozart.mozart_android;
-
+//More help about volley: http://www.androidhive.info/2014/07/android-custom-listview-with-image-and-text-using-volley/
+//API mozart http://mozart.ngrok.io/api/worksets/
+//Example api http://api.androidhive.info/json/movies.json
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;

@@ -1,4 +1,4 @@
-package com.mozart.mozart_android;
+package com.mozart.custom_view_volley;
 
 import com.android.volley.toolbox.ImageLoader.ImageCache;
 

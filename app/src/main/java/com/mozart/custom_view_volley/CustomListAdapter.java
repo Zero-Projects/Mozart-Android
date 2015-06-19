@@ -1,5 +1,5 @@
-package com.mozart.mozart_android;
-
+package com.mozart.custom_view_volley;
+// This class takes care of caching images on disk.
 import java.util.List;
 
 import android.app.Activity;
@@ -12,26 +12,27 @@ import android.widget.TextView;
 
 import com.android.volley.toolbox.ImageLoader;
 import com.android.volley.toolbox.NetworkImageView;
+import com.mozart.mozart_android.R;
 
 public class CustomListAdapter extends BaseAdapter {
     private Activity activity;
     private LayoutInflater inflater;
-    private List<Obra> movieItems;
+    private List<ModelWork> workItems;
     ImageLoader imageLoader = AppController.getInstance().getImageLoader();
 
-    public CustomListAdapter(Activity activity, List<Obra> movieItems) {
+    public CustomListAdapter(Activity activity, List<ModelWork> workItems) {
         this.activity = activity;
-        this.movieItems = movieItems;
+        this.workItems = workItems;
     }
 
     @Override
     public int getCount() {
-        return movieItems.size();
+        return workItems.size();
     }
 
     @Override
     public Object getItem(int location) {
-        return movieItems.get(location);
+        return workItems.get(location);
     }
 
     @Override
@@ -58,20 +59,20 @@ public class CustomListAdapter extends BaseAdapter {
         TextView year = (TextView) convertView.findViewById(R.id.releaseYear);
 
         // getting movie data for the row
-        Obra m = movieItems.get(position);
+        ModelWork modelWork = workItems.get(position);
 
         // thumbnail image
-        thumbNail.setImageUrl(m.getThumbnailUrl(), imageLoader);
+        thumbNail.setImageUrl(modelWork.getThumbnailUrl(), imageLoader);
 
         // title
-        title.setText(m.getTitle());
+        title.setText(modelWork.getTitle());
 
         // rating
-        rating.setText("Rating: " + String.valueOf(m.getRating()));
+        rating.setText("Rating: " + String.valueOf(modelWork.getRating()));
 
         // genre
         String genreStr = "";
-        for (String str : m.getGenre()) {
+        for (String str : modelWork.getGenre()) {
             genreStr += str + ", ";
         }
         genreStr = genreStr.length() > 0 ? genreStr.substring(0,
@@ -79,7 +80,7 @@ public class CustomListAdapter extends BaseAdapter {
         genre.setText(genreStr);
 
         // release year
-        year.setText(String.valueOf(m.getYear()));
+        year.setText(String.valueOf(modelWork.getYear()));
 
         return convertView;
     }
