@@ -1,8 +1,7 @@
-package com.mozart.mozart_android;
+package com.mozart.SlidingTab;
 
 import android.content.Context;
 import android.graphics.Typeface;
-import android.os.Build;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.util.AttributeSet;
@@ -15,6 +14,8 @@ import android.view.ViewGroup;
 import android.widget.HorizontalScrollView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import com.mozart.mozart_android.R;
 
 public class SlidingTabLayout extends HorizontalScrollView {
     /**

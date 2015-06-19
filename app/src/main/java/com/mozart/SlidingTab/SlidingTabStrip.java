@@ -1,4 +1,4 @@
-package com.mozart.mozart_android;
+package com.mozart.SlidingTab;
 import android.R;
 import android.content.Context;
 import android.graphics.Canvas;

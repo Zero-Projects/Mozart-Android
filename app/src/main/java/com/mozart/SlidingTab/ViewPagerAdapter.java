@@ -1,8 +1,13 @@
-package com.mozart.mozart_android;
+package com.mozart.SlidingTab;
+//This class shows the next fragment views: Explorework, LoadWorks
+//only available for user artists
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
+
+import com.mozart.mozart_android.ExploreWorks;
+import com.mozart.mozart_android.LoadWorks;
 
 public class ViewPagerAdapter extends FragmentStatePagerAdapter {
 

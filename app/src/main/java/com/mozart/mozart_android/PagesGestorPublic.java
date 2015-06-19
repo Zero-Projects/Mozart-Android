@@ -7,6 +7,9 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.mozart.SlidingTab.SlidingTabLayout;
+import com.mozart.SlidingTab.ViewPagerAdapter;
+
 
 public class PagesGestorPublic extends ActionBarActivity {
 
