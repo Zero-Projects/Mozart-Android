@@ -25,12 +25,12 @@ public class ViewPagerAdapter extends FragmentStatePagerAdapter {
 
         if(position == 0) // if the position is 0 we are returning the First tab
         {
-            ExplorarObras tab = new ExplorarObras();
+            ExploreWorks tab = new ExploreWorks();
             return tab;
         }
         else
         {
-            CargarObras tab = new CargarObras();
+            LoadWorks tab = new LoadWorks();
             return tab;
         }
     }

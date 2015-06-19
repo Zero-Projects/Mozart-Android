@@ -2,19 +2,19 @@ package com.mozart.custom_view_volley;
 //This model class will be used to provide work objects data to list view after parsing the json.
 import java.util.ArrayList;
 
-public class ModelWork {
-    private String title,date,category,coverURL,user;
+public class WorkModel {
+    private String title,date,category,coverURL,autor;
 
-    public ModelWork() {
+    public WorkModel() {
     }
 
-    public ModelWork(String title, String date,String category,
-                     String coverURL,String user) {
+    public WorkModel(String title, String date, String category,
+                     String coverURL, String autor) {
         this.title = title;
         this.date = date;
         this.category = category;
         this.coverURL = coverURL;
-        this.user = user;
+        this.autor = autor;
     }
 
     public String getTitle() {
@@ -41,10 +41,10 @@ public class ModelWork {
     public void setCategory(String category){
         this.category = category;
     }
-    public String getUser(){
-        return user;
+    public String getAutor(){
+        return autor;
     }
-    public void setUser(String user){
-        this.user = user;
+    public void setAutor(String user){
+        this.autor = user;
     }
 }

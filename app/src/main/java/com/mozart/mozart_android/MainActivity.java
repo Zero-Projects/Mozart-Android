@@ -12,7 +12,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -20,7 +19,7 @@ public class MainActivity extends ActionBarActivity {
     TextView txtCuentaVinculada;
     EditText editTextEmail, editTextPassword;
     Typeface RobotoThin,RobotoRegular,RobotoMedium,RobotoLight,iconFonts,enterFont;
-    Button buttonProblemas,buttonEntra;
+    Button buttonProblemas,buttonEntra,buttonEntrarPublico;
     ImageButton buttonEntrar,buttonEmail,buttonPassword,ButtonEmail,ButtonPassword;
     String email=null, password=null;
 
@@ -55,6 +54,7 @@ public class MainActivity extends ActionBarActivity {
         editTextEmail = (EditText)findViewById(R.id.txtEmail);
         editTextPassword = (EditText)findViewById(R.id.txtPassword);
         buttonEntra = (Button)findViewById(R.id.buttonEntrar);
+        buttonEntrarPublico = (Button)findViewById(R.id.buttonExplorar);
         buttonProblemas = (Button)findViewById(R.id.buttonProblemas);
         buttonEmail = (ImageButton)findViewById(R.id.buttonEmail);
         buttonPassword = (ImageButton)findViewById(R.id.buttonPassword);
@@ -70,12 +70,13 @@ public class MainActivity extends ActionBarActivity {
         txtCuentaVinculada.setTypeface(RobotoRegular);
         buttonProblemas.setTypeface(RobotoRegular);
         buttonEntra.setTypeface(RobotoRegular);
+        buttonEntrarPublico.setTypeface(RobotoRegular);
     }
     public void onClickEntrar(View view){
         email = editTextEmail.getText().toString();
         password = editTextPassword.getText().toString();
         if(email.equals("mozart")  && password.equals("mozart")){
-            Intent intent = new Intent(this, GestorPages.class);
+            Intent intent = new Intent(this, PageManager.class);
             startActivity(intent);
         }else{
             Toast toast = Toast.makeText(getApplicationContext(),

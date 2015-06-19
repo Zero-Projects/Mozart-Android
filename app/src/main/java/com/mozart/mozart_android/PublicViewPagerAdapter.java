@@ -4,14 +4,14 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
-public class ViewPagerAdapterPublic extends FragmentStatePagerAdapter {
+public class PublicViewPagerAdapter extends FragmentStatePagerAdapter {
 
     CharSequence Titles[]; // This will Store the Titles of the Tabs which are Going to be passed when ViewPagerAdapter is created
     int NumbOfTabs; // Store the number of tabs, this will also be passed when the ViewPagerAdapter is created
 
 
     // Build a Constructor and assign the passed Values to appropriate values in the class
-    public ViewPagerAdapterPublic(FragmentManager fm,CharSequence mTitles[], int mNumbOfTabsumb) {
+    public PublicViewPagerAdapter(FragmentManager fm, CharSequence mTitles[], int mNumbOfTabsumb) {
         super(fm);
 
         this.Titles = mTitles;
@@ -25,12 +25,12 @@ public class ViewPagerAdapterPublic extends FragmentStatePagerAdapter {
 
         if(position == 0) // if the position is 0 we are returning the First tab
         {
-            ExplorarObras tab = new ExplorarObras();
+            ExploreWorks tab = new ExploreWorks();
             return tab;
         }
         else
         {
-            CargarObras tab = new CargarObras();
+            LoadWorks tab = new LoadWorks();
             return tab;
         }
     }

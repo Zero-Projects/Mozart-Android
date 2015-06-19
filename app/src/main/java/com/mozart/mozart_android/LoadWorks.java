@@ -24,10 +24,9 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.Toast;
 import android.widget.AdapterView.OnItemSelectedListener;
 
-public class CargarObras extends Fragment {
+public class LoadWorks extends Fragment {
     AlertDialog levelDialog;
     Bitmap bitmapImage;
     Button buttonSubirObra,buttonSeleccionarArchivo;
@@ -41,7 +40,7 @@ public class CargarObras extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        view = inflater.inflate(R.layout.activity_cargar_obras, container, false);
+        view = inflater.inflate(R.layout.activity_load_works, container, false);
         cargarFuentes();
         //Carga elementos del spinner
         setSpinnerContent(view);

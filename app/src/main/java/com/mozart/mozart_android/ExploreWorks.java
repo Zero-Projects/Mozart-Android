@@ -24,26 +24,26 @@ import com.android.volley.VolleyLog;
 import com.android.volley.toolbox.JsonArrayRequest;
 import com.mozart.custom_view_volley.AppController;
 import com.mozart.custom_view_volley.CustomListAdapter;
-import com.mozart.custom_view_volley.ModelWork;
+import com.mozart.custom_view_volley.WorkModel;
 
 
-public class ExplorarObras extends Fragment {
+public class ExploreWorks extends Fragment {
     Typeface RobotoThin,RobotoRegular,RobotoMedium,RobotoLight,iconFonts,enterFont;
     View view;
     // Log tag
     private static final String TAG = MainActivity.class.getSimpleName();
 
     // Movies json url
-    private static final String url = "http://mozart.ngrok.io/api/worksets/";
-//    private static final String url = "http://api.androidhive.info/json/movies.json";
+//    private static final String url = "http://mozart.ngrok.io/api/worksets/";
+    private static final String url = "http://api.androidhive.info/json/movies.json";
     private ProgressDialog pDialog;
-    private List<ModelWork> workList = new ArrayList<ModelWork>();
+    private List<WorkModel> workList = new ArrayList<WorkModel>();
     private ListView listView;
     private CustomListAdapter adapter;
 
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        view = inflater.inflate(R.layout.activity_explorar_obras, container, false);
+        view = inflater.inflate(R.layout.activity_explore_works, container, false);
 
         cargarFuentes();
 
@@ -68,23 +68,23 @@ public class ExplorarObras extends Fragment {
                             try {
 
                                 JSONObject obj = response.getJSONObject(i);
-                                ModelWork movie = new ModelWork();
-                                movie.setTitle(obj.getString("title"));
-                                movie.setThumbnailUrl(obj.getString("image"));
-                                movie.setRating(((Number) obj.get("rating"))
-                                        .doubleValue());
-                                movie.setYear(obj.getInt("releaseYear"));
+                                WorkModel workModel = new WorkModel();
+                                workModel.setCoverURL(obj.getString("cover"));
+                                workModel.setTitle(obj.getString("title"));
+                                workModel.setAutor(obj.getString("autor"));
+                                workModel.setCategory(obj.getString("category"));
+                                workModel.setDate(obj.getString("date"));
 
-                                // Genre is json array
-                                JSONArray genreArry = obj.getJSONArray("genre");
-                                ArrayList<String> genre = new ArrayList<String>();
-                                for (int j = 0; j < genreArry.length(); j++) {
-                                    genre.add((String) genreArry.get(j));
-                                }
-                                movie.setGenre(genre);
+                                // Genre is json array EXAMPLE...
+//                                JSONArray genreArry = obj.getJSONArray("genre");
+//                                ArrayList<String> genre = new ArrayList<String>();
+//                                for (int j = 0; j < genreArry.length(); j++) {
+//                                    genre.add((String) genreArry.get(j));
+//                                }
+//                                workModel.setGenre(genre);
 
-                                // adding movie to movies array
-                                workList.add(movie);
+                                // adding work to movies array
+                                workList.add(workModel);
 
                             } catch (JSONException e) {
                                 e.printStackTrace();

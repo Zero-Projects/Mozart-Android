@@ -17,10 +17,10 @@ import com.mozart.mozart_android.R;
 public class CustomListAdapter extends BaseAdapter {
     private Activity activity;
     private LayoutInflater inflater;
-    private List<ModelWork> workItems;
+    private List<WorkModel> workItems;
     ImageLoader imageLoader = AppController.getInstance().getImageLoader();
 
-    public CustomListAdapter(Activity activity, List<ModelWork> workItems) {
+    public CustomListAdapter(Activity activity, List<WorkModel> workItems) {
         this.activity = activity;
         this.workItems = workItems;
     }
@@ -44,43 +44,35 @@ public class CustomListAdapter extends BaseAdapter {
     public View getView(int position, View convertView, ViewGroup parent) {
 
         if (inflater == null)
-            inflater = (LayoutInflater) activity
-                    .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+            inflater = (LayoutInflater) activity.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         if (convertView == null)
-            convertView = inflater.inflate(R.layout.list_row, null);
+            convertView = inflater.inflate(R.layout.activity_explore_works, null);
 
         if (imageLoader == null)
             imageLoader = AppController.getInstance().getImageLoader();
-        NetworkImageView thumbNail = (NetworkImageView) convertView
-                .findViewById(R.id.thumbnail);
+        NetworkImageView networkImageView = (NetworkImageView) convertView.findViewById(R.id.cover);
         TextView title = (TextView) convertView.findViewById(R.id.title);
-        TextView rating = (TextView) convertView.findViewById(R.id.rating);
-        TextView genre = (TextView) convertView.findViewById(R.id.genre);
-        TextView year = (TextView) convertView.findViewById(R.id.releaseYear);
+        TextView autor = (TextView) convertView.findViewById(R.id.autor);
+        TextView category = (TextView) convertView.findViewById(R.id.category);
+        TextView date = (TextView) convertView.findViewById(R.id.date);
 
-        // getting movie data for the row
-        ModelWork modelWork = workItems.get(position);
+        // getting work data for the row
+        WorkModel workModel = workItems.get(position);
 
-        // thumbnail image
-        thumbNail.setImageUrl(modelWork.getThumbnailUrl(), imageLoader);
+        // cover image
+        networkImageView.setImageUrl(workModel.getCoverURL(), imageLoader);
 
         // title
-        title.setText(modelWork.getTitle());
+        title.setText(workModel.getTitle());
 
-        // rating
-        rating.setText("Rating: " + String.valueOf(modelWork.getRating()));
+        // autor
+        autor.setText("Autor: " + String.valueOf(workModel.getAutor()));
 
-        // genre
-        String genreStr = "";
-        for (String str : modelWork.getGenre()) {
-            genreStr += str + ", ";
-        }
-        genreStr = genreStr.length() > 0 ? genreStr.substring(0,
-                genreStr.length() - 2) : genreStr;
-        genre.setText(genreStr);
+        // category
+        category.setText("Categoria: "+String.valueOf(workModel.getCategory()));
 
-        // release year
-        year.setText(String.valueOf(modelWork.getYear()));
+        // date
+        date.setText(String.valueOf(workModel.getDate()));
 
         return convertView;
     }

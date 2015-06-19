@@ -3,211 +3,223 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center_vertical|center_horizontal"
-    android:background="@color/background"
-    android:padding="15dp">
+    android:background="@color/background">
 
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center_vertical|center_horizontal">
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/imgZero"
-            android:src="@drawable/mozart_primary_sn"
-            android:scaleType="fitXY"
-            android:adjustViewBounds="true"
-            android:contentDescription="Logo MozArt" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:orientation="vertical"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView3">
 
         <LinearLayout
             android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:gravity="center_vertical|center_horizontal">
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_margin="15dp">
 
             <LinearLayout
                 android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical|center_horizontal">
 
-                <ImageButton
-                    android:layout_width="26dp"
-                    android:layout_height="26dp"
-                    android:id="@+id/buttonEmail"
-                    android:background="@drawable/primary_mail"
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imgZero"
+                    android:src="@drawable/mozart_primary_sn"
                     android:scaleType="fitXY"
-                    android:layout_gravity="center"
-                    android:adjustViewBounds="true" />
-
-                <EditText
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/txtEmail"
-                    android:hint="Email"
-                    android:singleLine="false"
-                    android:textColorHint="@color/secondary_text"
-                    android:padding="10dp"
-                    android:textColor="@color/primary_text"
-                    android:textSize="18sp"
-                    android:layout_weight="9"
-                    android:inputType="textEmailAddress" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <ImageButton
-                    android:layout_width="26dp"
-                    android:layout_height="26dp"
-                    android:id="@+id/buttonPassword"
                     android:adjustViewBounds="true"
-                    android:background="@drawable/primary_lock"
-                    android:layout_gravity="center" />
-
-                <EditText
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/txtPassword"
-                    android:layout_weight="9"
-                    android:singleLine="false"
-                    android:textColorHint="@color/secondary_text"
-                    android:hint="Contraseña"
-                    android:textColor="@color/primary_text"
-                    android:textSize="18sp"
-                    android:inputType="textPassword"
-                    android:padding="10dp" />
+                    android:contentDescription="Logo MozArt" />
             </LinearLayout>
 
             <LinearLayout
                 android:orientation="vertical"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="10dp">
+                android:layout_height="wrap_content">
 
-                <Button
+                <LinearLayout
+                    android:orientation="vertical"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Entrar"
-                    android:id="@+id/buttonEntrar"
-                    android:background="@drawable/raised_selector"
-                    android:layout_margin="5dp"
-                    android:textColor="@color/background"
-                    android:textSize="16sp"
-                    android:onClick="onClickEntrar" />
+                    android:layout_marginTop="15dp"
+                    android:gravity="center_vertical|center_horizontal">
 
-                <Button
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageButton
+                            android:layout_width="26dp"
+                            android:layout_height="26dp"
+                            android:id="@+id/buttonEmail"
+                            android:background="@drawable/primary_mail"
+                            android:scaleType="fitXY"
+                            android:layout_gravity="center"
+                            android:adjustViewBounds="true" />
+
+                        <EditText
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/txtEmail"
+                            android:hint="Email"
+                            android:singleLine="false"
+                            android:textColorHint="@color/secondary_text"
+                            android:padding="10dp"
+                            android:textColor="@color/primary_text"
+                            android:textSize="18sp"
+                            android:layout_weight="9"
+                            android:inputType="textEmailAddress" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageButton
+                            android:layout_width="26dp"
+                            android:layout_height="26dp"
+                            android:id="@+id/buttonPassword"
+                            android:adjustViewBounds="true"
+                            android:background="@drawable/primary_lock"
+                            android:layout_gravity="center" />
+
+                        <EditText
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/txtPassword"
+                            android:layout_weight="9"
+                            android:singleLine="false"
+                            android:textColorHint="@color/secondary_text"
+                            android:hint="Contraseña"
+                            android:textColor="@color/primary_text"
+                            android:textSize="18sp"
+                            android:inputType="textPassword"
+                            android:padding="10dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="10dp">
+
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Entrar"
+                            android:id="@+id/buttonEntrar"
+                            android:background="@drawable/raised_selector"
+                            android:layout_margin="5dp"
+                            android:textColor="@color/background"
+                            android:textSize="16sp"
+                            android:onClick="onClickEntrar" />
+
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Entrar sin cuenta"
+                            android:background="@drawable/flat_selector"
+                            android:id="@+id/buttonExplorar"
+                            android:layout_margin="5dp"
+                            android:textColor="@color/primary"
+                            android:onClick="onClickEntrarPublico"
+                            android:textSize="16sp" />
+
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="¿Olvidaste tu contraseña?"
+                            android:id="@+id/buttonProblemas"
+                            android:layout_margin="5dp"
+                            android:background="@drawable/flat_selector"
+                            android:textColor="@color/primary"
+                            android:visibility="gone" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Entrar sin cuenta"
-                    android:background="@drawable/flat_selector"
-                    android:id="@+id/buttonExplorar"
-                    android:layout_margin="5dp"
-                    android:textColor="@color/primary"
-                    android:onClick="onClickEntrarPublico"
-                    android:textSize="16sp" />
+                    android:layout_marginTop="15dp">
 
-                <Button
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="O con una cuenta ya vinculada"
+                        android:id="@+id/txtCuentaVinculada"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:textColor="@color/primary_text"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="¿Olvidaste tu contraseña?"
-                    android:id="@+id/buttonProblemas"
-                    android:layout_margin="5dp"
-                    android:background="@drawable/flat_selector"
-                    android:textColor="@color/primary"
-                    android:visibility="gone" />
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:layout_marginBottom="10dp">
+
+                    <Button
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:id="@+id/buttonFacebook"
+                        android:background="@drawable/primary_facebook"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:singleLine="true" />
+
+                    <Button
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:id="@+id/buttonTwitter"
+                        android:adjustViewBounds="true"
+                        android:background="@drawable/primary_twitter"
+                        android:scaleType="fitXY"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:singleLine="true" />
+
+                    <Button
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:scaleType="fitXY"
+                        android:id="@+id/buttonGoogle"
+                        android:background="@drawable/primary_google"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:adjustViewBounds="true"
+                        android:singleLine="true" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical|right">
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Regístrate aquí"
+                        android:id="@+id/buttonRegistrarse"
+                        android:background="@drawable/flat_selector"
+                        android:layout_margin="5dp"
+                        android:textColor="@color/primary"
+                        android:onClick="onClickEntrar"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+
             </LinearLayout>
-
         </LinearLayout>
-
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="15dp">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="O con una cuenta ya vinculada"
-                android:id="@+id/txtCuentaVinculada"
-                android:gravity="center_vertical|center_horizontal"
-                android:textColor="@color/primary_text"
-                android:paddingTop="10dp"
-                android:paddingBottom="10dp"
-                android:textSize="18sp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp"
-            android:gravity="center_vertical|center_horizontal"
-            android:layout_marginBottom="10dp">
-
-            <Button
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:id="@+id/buttonFacebook"
-                android:background="@drawable/primary_facebook"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp"
-                android:singleLine="true" />
-
-            <Button
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:id="@+id/buttonTwitter"
-                android:adjustViewBounds="true"
-                android:background="@drawable/primary_twitter"
-                android:scaleType="fitXY"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp"
-                android:singleLine="true" />
-
-            <Button
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:scaleType="fitXY"
-                android:id="@+id/buttonGoogle"
-                android:background="@drawable/primary_google"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp"
-                android:adjustViewBounds="true"
-                android:singleLine="true" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:gravity="center_vertical|right">
-
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Regístrate aquí"
-                android:id="@+id/buttonRegistrarse"
-                android:background="@drawable/flat_selector"
-                android:layout_margin="5dp"
-                android:textColor="@color/primary"
-                android:onClick="onClickEntrar"
-                android:textSize="16sp" />
-
-        </LinearLayout>
-
-    </LinearLayout>
+    </ScrollView>
 </LinearLayout>

@@ -22,7 +22,7 @@
             android:screenOrientation="portrait">
         </activity>
         <activity
-            android:name=".GestorPages"
+            android:name=".PageManager"
             android:label="@string/app_name">
         </activity>
         <activity android:name=".PagesGestorPublic"
